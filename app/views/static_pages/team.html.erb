@@ -1,5 +1,149 @@
 <% @page_title = "Our Team" %>
-<% @page_description = "New Description" %>
+<% @page_description = "The High Seas Team is made up of creativity and talent. When you work with us, you have access to every member." %>
 
-<h1>StaticPages#team</h1>
-<p>Find me in app/views/static_pages/team.html.erb</p>
+
+<section class="team-h1">
+    <div class="container-fluid">
+        <h1>Meet Our Team</h1>
+    </div>
+</section>
+<div class="clearfix"></div>
+
+<div class="container demo-3">
+    <ul class="grid cs-style-4">
+        <li>
+            <figure>
+                <div><%=image_tag( 'team/color-sam.jpg', alt: 'HSDH Portfolio Sam Sumlin', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h3>Sam <br><span>Sumlin</span></h3>
+                    <p class="title">Co-Founder</p>
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 708</span></p>
+
+                    <%= mail_to "sam@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        sam@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li>
+            <figure>
+                <div><%=image_tag( 'team/billy.jpg', alt: 'HSDH Portfolio Will Burnette', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h3>Will <br><span>Burnette</span></h3>
+                    <p class="title">Co-Founder</p>
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 702</span></p>
+
+                    <%= mail_to "will@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        will@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li>
+            <figure>
+                <div><%=image_tag( 'team/clayton.jpg', alt: 'HSDH Portfolio Clayton Blackwell', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h3>Clayton <br><span>Blackwell</span></h3>
+                    <p class="title">Digital Media Manager</p>
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 701</span></p>
+
+                    <%= mail_to "clayton@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        clayton@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li>
+            <figure>
+                <div><%=image_tag( 'team/color-daniel.jpg', alt: 'HSDH Portfolio Daniel Davis', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h3>Daniel <br><span>Davis</span></h3>
+                    <p class="title">Web Developer</p>
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 703</span></p>
+
+                    <%= mail_to "daniel@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        daniel@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li>
+            <figure>
+                <div><%=image_tag( 'team/color-kelli.jpg', alt: 'HSDH Portfolio Kelli Parris', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h3>Kelli <br><span>Parris</span></h3>
+                    <p class="title">Web Developer</p>
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 706</span></p>
+
+                    <%= mail_to "kelli@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        kelli@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <div><%=image_tag( 'team/color-josh.jpg', alt: 'HSDH Portfolio Josh Yates', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h3>Josh <br><span>Yates</span></h3>
+                    <p class="title">Digital Strategist</p>
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 709</span></p>
+
+                    <%= mail_to "josh@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        josh@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li>
+            <figure>
+                <div><%=image_tag( 'team/color-debbie.jpg', alt: 'HSDH Portfolio Debbie Roudabush', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h3>Debbie <br><span>Roudabush</span></h3>
+                    <p class="title">Account Manager</p>
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 705</span></p>
+
+                    <%= mail_to "debbie@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        debbie@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li>
+            <figure class="invite">
+                <div><%=image_tag( 'team/color-text.jpg', alt: 'HSDH Portfolio', class: 'img-responsive') %></div>
+                <figcaption>
+                    <h5>Our team is made up of creativity and talent. If you think High Seas is the perfect place for you, send us a copy of your resume, and tell us a little about yourself.<br><br>
+                    We are always happy to hear from someone who wants to bring their talents and skills over to our team.</h5>
+
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %></p>
+
+                    <%= mail_to "info@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        info@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+    </ul>
+</div>
+

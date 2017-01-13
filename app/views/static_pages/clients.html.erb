@@ -1,5 +1,235 @@
 <% @page_title = "Our Work" %>
-<% @page_description = "New Description" %>
+<% @page_description = "The High Seas team goes above and beyond for our clients. We have the experience you want, and we work very hard to achieve your goals." %>
 
-<h1>StaticPages#clients</h1>
-<p>Find me in app/views/static_pages/clients.html.erb</p>
+<section class="client-sec1">
+	<div class="inner">
+		<div class="container">
+			<div class="col-md-6 col-md-offset-3 col-xs-12">
+				<div class="wow fadeInDown" data-wow-delay="0.1s">
+					<h1>What Makes High Seas' Clients So Happy?</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="intro-box">
+	<div class="container-fluid">
+		<div class="col-md-8 col-md-offset-2 col-xs-12">
+			<div class="intro wow fadeInUp" data-wow-delay="0.1s">
+				<h3>Quality. &nbsp;Consistency. &nbsp;Reliability.</h3>
+			</div>
+			<h4>
+			As a full service agency, High Seas goes further than most others to achieve the goals of our clients.
+			When you bring us on board, we adopt the same objectives you have for your business, and use them as a target for the work we do.
+			We are proud of the relationships we have with our clients, and we work very hard to maintain them.
+			</h4>
+			<div class="client-logos">
+				<div class="col-md-3 no-padding col-xs-12">
+					<h4 class="plus"> <span>Your</span> success<br class="mobile-hide"> is <span>our</span> success.</h4>
+				</div>
+				<div class="col-md-9 col-xs-12">
+					<div class="logo-sec">
+						<%=image_tag( 'shades.png', alt:'High Seas Design House Clients - Shades Sunglasses', class: 'img-responsive clientlogo') %>
+						<%=image_tag( 'barrowlogo.png', alt:'High Seas Design House Clients - Barrow Fine Furniture', class: 'img-responsive clientlogo') %>
+						<%=image_tag( 'chrysler.png', alt:'High Seas Design House Clients - Gulf Chrysler', class: 'img-responsive clientlogo') %>
+						<%=image_tag( 'hangout.png', alt:'High Seas Design House Clients - The Hangout', class: 'img-responsive clientlogo') %>
+						<%=image_tag( 'vulcan-logo.png', alt:'High Seas Design House Clients - Vulcan', class: 'img-responsive clientlogo') %>
+						<%=image_tag( 'ferrell-logo.png', alt:'High Seas Design House Clients - Ferrell Family Dentistry', class: 'img-responsive clientlogo') %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="portfolio2 custom-port">
+	<div class="header">
+		<h3>Web Design Gallery</h3>
+		<p>Here are just a few examples of web design produced by our team at High Seas.</p>
+	</div>
+	<div class="work-section container-fluid">
+		<div class="col-md-12 no-padding-r pleft-3 col-xs-12">
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "http://shadessunglasses.com", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Shades Sunglasses</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/shades.jpg', alt: 'High Seas Design House - Website Design Portfolio - Shades Sunglasses',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "https://barrowfinefurniture.com/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Barrow Fine Furniture</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/barrow.jpg', alt: 'High Seas Design House - Website Design Portfolio - Barrow Furniture',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "http://croninsurfboards.com/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Cronin Surfboards</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/cronin.jpg', alt: 'High Seas Design House - Website Design Portfolio - Cronin Surfboards',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "https://descentspearfishing.com/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Descent Spearfishing</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/descent.jpg', alt: 'High Seas Design House - Website Design Portfolio - Descent Spearfishing',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "http://boneheadstructure.com/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Bonehead Structure</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/bonehead.jpg', alt: 'High Seas Design House - Website Design Portfolio - Bonehead Sturcture',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "http://shopcharmboutique.com/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Charm Boutique</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/charm.jpg', alt: 'High Seas Design House - Website Design Portfolio - Charm Boutique',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "http://ferrellfamilydental.com/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Ferrell Family Dental</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/ferrell.jpg', alt: 'High Seas Design House - Website Design Portfolio - Ferrell Dental',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3 ">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "http://www.downunderdiveshop.com/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Down Under Diver Shop</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/downunder.jpg', alt: 'High Seas Design House - Website Design Portfolio - Down Under Dive Shop',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-block coll-3">
+				<div class="box">
+					<div class="box-holder">
+						<%=link_to "http://gcwelding.net/", :target => "_blank", class: "over" do %>
+						<div class="holder">
+							<div class="frame">
+								<div class="over-frame">
+									<span class="plus">+</span>
+									<strong class="title">Gulf Coast Welding</strong>
+								</div>
+							</div>
+						</div>
+						<% end %>
+					</div>
+					<div class="stretch">
+						<%=image_tag( 'concept/weld.jpg', alt: 'High Seas Design House - Website Design Portfolio - Gulf Coast Welding',  class: 'img-responsive') %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

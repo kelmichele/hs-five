@@ -1,5 +1,101 @@
 <% @page_title = "About" %>
-<% @page_description = "New Description" %>
+<% @page_description = "High Seas Design House offers effective digital solutions that give your company a creative edge over the competition. " %>
 
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+
+<section class="about-page1">
+  <div class="inner">
+    <div class="container-fluid">
+      <div class="col-md-4 col-xs-12">
+        <div class="left">
+          <h1 class="wow fadeInDown" data-wow-delay="0.1s">About High Seas</h1>
+          <h3><span class="wow fadeInUp" data-wow-delay="0.1s">Digital</span> <span class="wow fadeInUp" data-wow-delay="0.2s">Operations</span> <span class="wow fadeInUp" data-wow-delay="0.3s">Support</span></h3>
+          <p>High Seas was founded in 2012, as a resource to give companies along the Gulf Coast a creative edge.
+        </div>
+      </div>
+
+      <div class="col-md-5 col-md-offset-3 col-xs-12">
+        <div class="right">
+          <h3 class="quote">From the very beginning, we've thrived on creativity and innovation, and we've always had a passion for what we do.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="about-page2">
+    <div class="inner">
+      <div class="container">
+        <div class="col-md-6 col-xs-12">
+          <div class="story">
+              <p class="story1">
+                <b>We started out working from a house -- with four of us gathered around a dining room table -- designing websites, producing real estate photography, and offering fresh ideas and new ways of doing business.</b>
+              </p>
+
+              <hr><hr>
+
+              <p>
+                Since 2012, we have grown significantly. Our services have evolved, and we have long since upgraded our workspace to an office. But our priorities and passion have never changed.
+              </p>
+
+              <p>
+                The High Seas team is made up of talented individuals who each bring something valuable to the table. When you join forces with us, you put yourself ahead of the pack, and you can feel comfortable knowing that you are in business with a group who loves the work that they do, and truly cares about the needs of every client.
+              </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-md-offset-1 col-xs-12">
+            <%=image_tag('table-tall.jpg', alt: 'High Seas Design House - The Early Days - Orange Beach, Al', class: 'img-responsive mobile-hide') %>
+            <%=image_tag('table-round.jpg', alt: 'High Seas Design House - The beginning', class: 'img-responsive mobile-show') %>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-page3">
+    <div class="inner">
+      <div class="container-fluid no-padding">
+        <div class="col-md-5 col-xs-12 no-padding">
+          <div class="left">
+            <h4>We are a full-service, digital solutions agency, driven by creativity, and committed to our clients.</h4>
+            <p>We offer a variety of effective digital solutions to individuals, companies, and organizations looking to modernize the way they do business.  </p>
+            <%=image_tag('gears-xs.png', alt: 'High Seas Design House, Creative agency, Orange Beach, Al', class: 'img-responsive about-hold') %>
+          </div>
+        </div>
+
+        <div class="col-md-7 col-xs-12 no-padding">
+          <div class="right">
+
+            <div class="col-md-6 no-padding">
+              <%= link_to "design", class: 'about-service website' do %>
+                <div class="content">
+                  <div class="title"><h3>Web Design</h3></div>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="col-md-6 col-md-offset-6 no-padding ">
+              <%= link_to "ecommerce", class: 'about-service ecommerce' do %>
+                <div class="content">
+                  <div class="title"><h3>Ecommerce</h3></div>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="col-md-6 no-padding">
+              <%= link_to "sem", class: 'about-service dmarket' do %>
+                <div class="content">
+                  <div class="title"><h3>Digital Advertising</h3></div>
+                </div>
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+

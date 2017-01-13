@@ -1,11 +1,6 @@
 @import "variables";
 @import "mixins";
 
-header {
-  .social-links {
-    li i {color: $black; font-size: 17px; }
-  }
-}
 
 .megamenu-parent {list-style:none;padding:0;margin:0;z-index:9;display:block;float:right;
     li{display:inline-block;position:relative;padding:0;border-top: 3px solid transparent; margin: 0 15px;
@@ -100,3 +95,131 @@ h3.module-title{color: $white;}
     #offcanvas-toggler { display:inline-block; }
     nav {display: none;}
 }
+
+
+
+header {
+    .main-menu {
+      position: relative;
+      text-align:center;
+    }
+      .navbar-default {
+        background-color: $white;
+        border: none;
+        margin-bottom:0;
+        border-radius:0;
+        position:relative;
+      }
+      .logo-header { padding-top:20px}
+      .navbar-default .navbar-nav { float: right; padding-top:15px; padding-bottom: 15px;}
+      .navbar-default .navbar-nav>li>a {
+        color: $dark;
+        display:block;
+        font-size: 16px;
+        padding:3px 10px 7px;
+        // padding-bottom:7px;
+        letter-spacing:1px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        margin-left: auto;
+        margin-right:20px;
+
+        @media only screen and (min-width: 1500px) {padding-top:15px;}
+      }
+
+      /*Dropdown CSS*/
+      .navbar-nav>li>.dropdown-menu {
+        padding:12px 0;
+        display:none;
+      }
+      .navbar-nav>li:hover > ul.dropdown-menu{
+        display: block;
+        -webkit-animation: fadeInUp 400ms;
+        -moz-animation: fadeInUp 400ms;
+        -ms-animation: fadeInUp 400ms;
+        -o-animation: fadeInUp 400ms;
+        animation: fadeInUp 400ms;
+      }
+
+      .dropdown-menu>li {
+        margin-left:0;
+      }
+
+      .dropdown-menu>li>a {
+        color:$white;
+        padding:5px 20px;
+      }
+
+      .dropdown-menu>li>a:hover,
+      .dropdown-menu>li>a:focus{
+        background-color:transparent;
+      }
+
+      @include bp(md) {
+        .navbar-default:after,
+        .navbar-default .navbar-nav > li > a:before { display:none}
+      }
+
+      .megamenu-parent {
+        .module{ padding:10px}
+        .dropdown{margin:0; margin-top:-1px; position:absolute; z-index:999; display:none; width: 100%;}
+        .dropdown .dropdown-inner{ width: 100%; background:$white; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2); padding:10px 3px 10px 8px; border-radius: 5px;}
+        .dropdown .dropdown-items{ width:100%; list-style:none; padding:0; margin:0; text-transform:none;}
+        .dropdown.dropdown-main{top:100%; width:180px;}
+
+        .dropdown.dropdown-main.menu-left{right:0;}
+        .dropdown.dropdown-sub{top:0; left:100%;}
+        .dropdown.dropdown-sub .dropdown-inner{box-shadow:0 0 5px rgba(0,0,0,0.2);}
+
+        .dropdown li.menu-item{display:block; padding:0; position:relative; font-size:16px; width: 100%; text-align:left;}
+        .dropdown li.menu-item >a{width:100%; display:block; padding: 7px 10px; color:$teal; cursor:pointer;}
+        .has-child:hover >.dropdown{display:block;}
+
+        .dropdown li.menu-item >a:hover {text-decoration: none; font-weight: bold; color:$black}
+
+      }
+      .megamenu-parent.menu-zoom .has-child:hover >.dropdown{-webkit-animation:spMenuZoom 400ms; animation:spMenuZoom 400ms;}
+      .megamenu-parent.menu-fade-up .has-child:hover >.dropdown{-webkit-animation:spMenuFadeInUp 400ms; animation:spMenuFadeInUp 400ms;}
+}
+
+.top-contact {
+  @include sec-default ();
+  padding-top:10px;
+  text-align: left;
+  font-weight:bold;
+    .tel-head { float: left; color: $b-gray; padding-left: 30px; font-size: 15px;
+      &:hover {color: $teal;}
+    }
+    .email { float: right; color: $b-gray; padding-right:15px; font-size: 15px;
+      &:hover {color: $teal; text-decoration: none;}
+    }
+}
+
+.mobile-contact {display: none;}
+
+ul.social-links{ padding-left: 0;
+  li { display: inline-block; margin-right: 5px;
+    .social-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+  @include bp(md) {
+    .top-contact { display: none;}
+    .mobile-contact {
+      display: block;
+      padding:15px 20px;
+      .phone { display: inline-block; float: left;}
+      .mail {display: inline-block; float: right;}
+      .social {display: inline-block; float: none;}
+      .tel-head, .email, a { width: 100%; float: left; color: $b-gray;}
+    }
+  }
+  @include bp(sm) {
+    .mobile-contact {
+      .phone, .mail { width: 100%; display: block; float: none; @include center-block (); text-align: center; padding-bottom:10px;}
+    }
+  }
