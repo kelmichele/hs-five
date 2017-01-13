@@ -1,0 +1,367 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+  @import "variables";
+  @import "mixins";
+
+
+.home {
+  .homesec-video {
+    @include sec-default ();
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    .video-over, .video-holder,
+    .video-holder .video-frame {
+      @include sec-default ();
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .video-holder {
+      overflow: hidden;
+    }
+
+    .over-holder {
+      @include sec-default ();
+      padding: 100px 0;
+      margin-top:10%;
+      width: 100%;
+      height: 100%;
+      background-image: url(image_path('hsdh-opac.png'));
+      background-size: 35%;
+      background-position: left center;
+      background-repeat: no-repeat;
+
+      .welcome {
+        @include sec-default ();
+        padding: 20px 0;
+
+        h1 {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          text-transform: uppercase;
+          color: $white;
+          font-family: $lato;
+          font-size: 110px;
+          line-height: .8em;
+          font-weight: 900;
+          letter-spacing: 5px;
+          .sm {
+            font-weight: 800;
+            font-size: 68px;
+            letter-spacing: 9px;
+            color: $white;
+          }
+        }
+        h3 {margin-top: 5px;font-weight: 300; font-size: 50px; color: $white; font-family: $poppins; }
+      }
+    }
+
+    @include bp(md) {
+      .video-holder {
+        @include sec-bgimage ();
+        background-image: url(image_path('mobile-bg2.png'));
+        .video-frame{display: none;}
+      }
+
+      .over-holder { padding: 10px 0;
+        .welcome {
+          padding: 40px 0;
+          h1, h1 .sm { font-size: 40px; line-height: 1.1em; letter-spacing: 1px;}
+          h3 {font-size: 30px; }
+        }
+      }
+    }
+
+    @media only screen and (max-width:640px) {
+      height:45vh;
+      .video-holder { background-image: url(image_path('mobile-bg2xs.png'));}
+      .over-holder { margin-top:25px;
+        .welcome {
+          padding: 40px 0;
+          h1, h1 .sm { font-size: 25px; line-height: 1.1em; letter-spacing: normal; font-weight: 800;}
+          h3 {font-size: 20px; }
+        }
+      }
+    }
+    @media only screen and (max-width: 570px) {
+      // height:75vh;
+    }
+    @media only screen and (max-width: 320px) {
+       height:40vh;
+    }
+  }
+
+  .border-slope {
+    overflow: hidden;
+    width: 110%;
+    position: absolute;
+    display: block;
+    bottom:0;
+    right:-15px;
+    margin: 0;
+    padding-top:40px;
+    background: $white;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    margin-bottom:-220px;
+    box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
+
+    .slope {
+      margin:0 auto;
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      transform: rotate(3deg);
+      padding:90px 0px 80px 30px;
+    }
+
+    @media only screen and (max-width: 570px) { display: none; }
+  }
+
+  .home-slope {
+    @include sec-default ();
+    background-color: $white;
+    padding: 30px 0px 50px 0px;
+
+    .intro {
+      @include sec-default ();
+      padding: 60px 0 80px 25px;
+      color: $dark;
+    }
+    h3 {color: $gray; font-size:27px; letter-spacing: 3px; line-height: 1em; margin-top: 0; font-weight: 800; font-family: $raleway; text-transform: uppercase;}
+    p {color: $gray; font-size:18px; font-family: $pro; font-style: italic; }
+    h2 {
+      font-weight: 900; color: $teal;
+      padding:0 0 5px; margin:0; line-height: 1.2em;
+      font-family: $raleway; text-transform: uppercase;
+      font-size: 50px;
+    }
+
+    .gears {
+      // margin-top: 30px;
+      padding: 70px 0px 0 15px;
+    }
+
+    .about-link{
+      padding:15px;
+      border:1px outset darken($teal,12%);
+      width: 45%;
+      text-align: center;
+      color: $white;
+      font-size: 18px;
+      background-color: $teal;
+      &:hover { text-decoration: none; font-weight: bold; background-color: $white; color: $teal;
+      -webkit-transition: all .4s ease;
+      transition: all .4s ease;}
+    }
+
+    @include bp(md) {
+      padding-top:0;
+      padding-bottom:70px;
+      // background-image: url(image_path('mac.jpg')); background-size: 30%; background-position: bottom right; background-repeat: no-repeat;
+      .intro {padding-bottom:25px;}
+      // .img-sm { display: none}
+    }
+
+    @include bp(sm) {
+    // @media only screen and (max-width:640px) {
+      background-size: 40%;
+      .intro {padding-left:15px;}
+      h3 {font-size:22px; }
+      p {color: $gray; font-size:18px; font-family: $pro; font-style: italic; }
+      h2 {font-size: 30px;}
+    }
+
+    @media only screen and (max-width: 570px) {
+      margin-top: 0;
+      .intro { padding-top: 25px;}
+    }
+    @include bp(xs) {
+    // @media only screen and (max-width: 320px) {
+      padding-bottom: 15px;
+      h2 { font-size: 20px;}
+       .gears {padding: 25px 0px 0 5px;}
+
+    }
+  }
+  .hcontent-body {
+    @include sec-default ();
+    @include sec-bgimage ();
+    background-image: url(image_path('workspacebw.jpg'));
+    background-attachment: fixed;
+
+    .hcontent-inner {
+      @include sec-default ();
+      background-color: rgba($black, 0.5);
+      padding: 40px;
+    }
+
+    .title-head {
+      @include sec-default ();
+      padding:60px;
+      text-align: center;
+    }
+    h2 {
+      font-weight: 800; color: $white;
+      padding:0px; margin:0;
+      line-height: 1.2em;
+      font-family: $raleway; text-transform: uppercase;
+      font-size: 45px;
+    }
+    @include bp(md) {
+      background-image: url(image_path('workspacebw-mob.jpg'));
+      background-attachment: scroll;
+      background-color: $b-gray;
+      .hcontent-inner {padding:10px;}
+      .title-head { padding: 25px; margin-bottom:15px;}
+    }
+    @include bp(sm) {
+    // @media only screen and (max-width:640px) {
+      .title-head { padding: 25px 0; margin-bottom:15px;}
+       h2 { font-size: 25px; }
+    }
+    @include bp(xs) {
+    // @media only screen and (max-width:320px) {
+      .col-md-4.col-xs-12 { padding: 0;}
+      .col-md-12.col-xs-12 { padding: 0;}
+    }
+
+  }
+
+  .home-service {
+    @include sec-default ();
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+
+    .content {  background: $cream; height:410px; padding: 20px 30px;}
+
+    .hs-icon {
+      @include center-block ();
+      height:90px;
+      padding-bottom: 15px;
+
+      &.tall { height:100px;}
+    }
+
+    .overlay { @include sec-default (); opacity: 0; padding: 0; background-color: $cream;
+      .service-link { text-align: center; @include center-block (); padding:10px;}
+    }
+
+    &:hover {
+      .title {
+        -webkit-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+        transform: scale(1.15);
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+
+        .title-a:hover { text-decoration: none;}
+      }
+
+      .overlay {
+        opacity: 1;
+        -webkit-transition: all .25s linear;
+        transition: all .25s linear;
+        transform: translateY(3px) ;
+        -ms-transform: translateY(3px) ;
+        -webkit-transform: translateY(3px) ;
+        position: relative;
+         -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+      }
+    }
+
+    h2 {
+      font-weight: 600; color: $gray;
+      line-height: 1.2em;
+      font-family: $raleway; text-transform: uppercase;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    p {
+      font-family: $pro;
+      color: $gray;
+      font-size:16px;
+      &.visible {padding:10px; margin-bottom: 5px; padding-bottom:0}
+    }
+
+    @include bp(md) {
+      .overlay { display: none;}
+      .content { height: 300px;}
+      .hs-icon {
+        @include center-block ();
+        width: 75px;
+        height:75px;
+        padding-bottom: 10px;
+      }
+      p.visible {padding:0px; margin-bottom: 5px; }
+    }
+    @include bp(sm) {
+    // @media only screen and (max-width:640px) {
+      padding:0;
+      .content { height:auto; padding: 20px;}
+    }
+  }
+
+  .partners{ @include sec-default (); background-color: $white;
+    background-image: url(image_path('pattern10.png'));
+    background-repeat: repeat;
+    background-position: top left;
+
+    .left {
+      @include sec-default ();
+      padding:40px 20px;
+      text-align: center;
+      h2 { padding-bottom: 40px; font-family: $lato; font-weight: 800; color: $teal; }
+    }
+    .right {
+      @include sec-default ();
+      background-color: $white;
+      padding-top:10px;
+      padding-left:30px;
+    }
+    .service-link { @include center-block ();}
+    .service-link:hover { background-color: $teal; color: $white; border:1px solid $dark;}
+    .p-img { width: 30%;  display: inline-block;
+      border-right: 1px solid #dfdfdf;
+      padding: 10px;
+      &.last {border-right: 0;}
+    }
+    hr.small {display: none;}
+
+    @include bp(md) {
+      .service-link { float: left; display: inline-block; width: 40%; margin-left:20px;
+          &.one {margin-right:15px;}
+      }
+    }
+
+    @include bp(sm) {
+    // @media only screen and (max-width:640px) {
+      .service-link { display: block; width: 90%; @include center-block ();}
+      .p-img { width: 49%; border:0;
+        &.xsbord{border-right:1px solid #dfdfdf;}
+      }
+      hr.large {display: none;}
+      hr.small {display: block;}
+    }
+    @include bp(xs) {
+    // @media only screen and (max-width:320px) {
+      .service-link { display: block; float: left;}
+    }
+  }
+}

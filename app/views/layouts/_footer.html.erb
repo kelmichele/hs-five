@@ -1,0 +1,67 @@
+<footer class="simple-footer">
+	<div class="footer-content">
+        <div class="container-fluid">
+            <div class="col-md-4 col-xs-12">
+                <ul class="footer-nav">
+                    <li><%= link_to "Digital Advertising", sem_path, class: 'ft-nav' %></li>
+                    <li><%= link_to "Ecommerce", ecommerce_path, class: 'ft-nav' %></li>
+                    <li><%= link_to "Web Design", design_path, class: 'ft-nav' %></li>
+                    <li><%= link_to "Work", clients_path, class: 'ft-nav' %></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-offset-1 col-xs-12">
+                <div class="contact-footer">
+                    <div class="ft-block">
+                        <%=image_tag('footer1.png', alt: 'High Seas Design House - phone number', class: 'img-responsive footicon')  %>
+                        <span class="ft-info"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,  country_code: 1, class: 'contacts' ) %></span>
+                    </div>
+
+                    <div class="ft-block">
+                        <%= mail_to "info@hsdesignhouse.com", "Email Us", encode: "hex" do %>
+                            <%= image_tag('footer2.png', alt: 'High Seas Design House - Email Us', class: 'img-responsive footicon')  %>
+                            <span class="ft-info">info@hs<span style="display:none">hexscramblewords</span>designhouse.com</span>
+                        <% end %>
+
+                    </div>
+
+                    <div class="ft-block">
+                        <%= image_tag('footer4.png', alt: 'High Seas Design House - Our Address', class: 'img-responsive footicon') %>
+                        <span class="ft-info">4851 Wharf Pkwy<br class="mobile-hide"> <b>Suite D-230</b><br> Orange Beach, Al 36561</span>
+                    </div>
+
+                    <div class="ft-block">
+                        <%= image_tag('footer3.png', alt: 'High Seas Design House Hours', class: 'img-responsive footicon') %>
+                        <span class="ft-info">Monday - Friday:<br> 8 a.m. - 5 p.m.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-xs-12">
+                <p class="copyright">&copy; <%= Time.now.year %> High Seas Design House. All rights reserved. </p>
+
+
+                <%= link_to '#header', class: 'backtop' do %>
+                    <%=image_tag('up.png', alt: 'High Seas Design House, Back to top', class: 'icon-up') %>
+                <% end %>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="offcanvas-menu">
+    <a class="close-offcanvas" href="#"><i class="fa fa-close"></i></a>
+    <div class="offcanvas-inner">
+        <div class="module">
+            <h3 class="module-title">Main Menu</h3>
+
+            <div class="module-content">
+              <ul class="nav menu">
+                <%= render 'layouts/nav' %>
+              </ul>
+            </div>
+        </div>
+    </div>
+</div>

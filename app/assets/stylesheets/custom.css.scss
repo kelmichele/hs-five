@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,300,100,200,500,600,800,700,900|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "variables";
+@import "mixins";
+
+.lspace-1 { letter-spacing: 10px; }
+.lspace-sm { letter-spacing: 5px; }
+
+.bpadding0 { padding-bottom: 0; }
+.tpadding0 { padding-top: 0; }
+.tmargin0 { margin-top: 0; }
+.bmargin0 { margin-bottom: 0; }
+.bmargin1 { margin-bottom: 10px; }
+.bmargin2 { margin-bottom: 20px; }
+.bmargin3 { margin-bottom: 30px; }
+.bmargin4 { margin-bottom: 40px; }
+
+
+.pleft-0 { padding-left: 0px; }
+.pleft-1 { padding-left: 10px; }
+.pleft-2 { padding-left: 20px; }
+.pleft-3 { padding-left: 30px; }
+.pleft-4 { padding-left: 40px; }
+.pleft-5 { padding-left: 50px; }
+
+.pright-0 { padding-right: 0px; }
+.pright-1 { padding-right: 10px; }
+.pright-2 { padding-right: 20px; }
+.pright-3 { padding-right: 30px; }
+.pright-4 { padding-right: 40px; }
+.pright-5 { padding-right: 50px; }
+
+.bpadding-1 { padding-bottom: 15px; }
+.bpadding-25 { padding-bottom: 25px; }
+.bpadding-50 { padding-bottom: 50px; }
+.p-top-1 { padding-top: 10px; }
+.p-top-2 { padding-top: 20px; }
+.p-top-3 { padding-top: 30px; }
+.p-top-4 { padding-top: 40px; }
+.p-top-5 { padding-top: 50px; }
+.extra-padding { padding: 35px; }
+.border-t { border-top: 2px solid #dfdfdf; }
+
+.l-2 { line-height: 25px; }
+.no-margin {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.no-padding-r { padding-right: 0; }
+.no-padding-l { padding-left: 0; }
+
+.mobile-show{ display: none;}
+.mobile-hide{ display: block;}
+@include bp(md) {
+  .mobile-hide{ display: none;}
+  .mobile-show{ display: block;}
+}
+
+img {max-width: 100%; height: auto; display: block;}
+ul {list-style-type:none;}
+
+
+
+
+
+/*------------------------------------------------------------------
+*******************************************************************
+--------------------------------------------------------------------
+              FOOTER
+-------------------------------------------------------------------
+*******************************************************************
+-------------------------------------------------------------------*/
+
+footer.simple-footer {
+  p.copyright { color: $light-gray; font-family:$pro; display: inline-block;}
+
+  .footer-content {
+    @include sec-default();
+    background-color: #2a2a2a;
+    padding:15px 0 10px;
+
+    .contact-footer {
+      @include sec-default();
+      padding-left:20px;
+    }
+    .ft-block { display: inline-block; margin-right:15px;
+      .footicon { display: inline-block; height:30px; }
+      span { background-color: $light-gray; padding:10px 15px; position:absolute; bottom:100%; z-index: 100; display: none;
+        &, a{color: $dark;}
+      }
+
+      &:hover { span { display: block;} }
+    }
+
+    ul.footer-nav {padding-left:0;
+      li {
+        display: inline-block;
+        margin-right:15px;
+
+        .ft-nav {font-size:16px; color: $light-gray;
+          &:hover {text-decoration: none; color: $teal; font-weight: bold;}
+        }
+      }
+    }
+  }
+  a.backtop {
+    right: 10px;
+    bottom:5px;
+    color: $white;
+    display: inline-block;
+    position: absolute;
+    font-size: 20px;
+    background: $teal;
+    text-align: center;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+
+    .icon-up {
+      width: 50%;
+      padding-bottom: 5px;
+    }
+}
+
+  @media only screen and (max-width:768px){
+    text-align: center;
+    p.copyright { text-align: center;}
+    .footer-content {
+      ul.footer-nav li {padding-bottom:8px;}
+      .contact-footer { padding-left: 5px;}
+      .ft-block { display: inline-block; margin:0; width: 49%; padding-bottom: 15px; padding-top:10px;
+        .footicon { display: block; height:25px; @include center-block (); }
+        span { background-color: transparent; padding:5px; position:relative; display: inline-block;
+          &, a{color: $white;}
+        }
+      }
+    }
+  }
+  @media only screen and (max-width:640px){
+    p.copyright {font-size: 14px;}
+    .footer-content {
+      .ft-block { width: 100%; padding-top:5px;
+        .footicon { height:20px;}
+      }
+    }
+    a.backtop { bottom: 40px;}
+  }
+
+}
