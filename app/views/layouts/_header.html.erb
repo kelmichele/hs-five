@@ -1,9 +1,37 @@
+<% content_for :t_contact do %>
+  <span class="tel-head"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: ". ", country_code: 1) %></span>
+
+  <%= mail_to "info@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+    info@hs<span style="display:none">hexscramblewords</span>designhouse.com
+  <% end %>
+<% end %>
+<% content_for :t_social do %>
+<ul class="social-links">
+  <li>
+    <%= link_to '/fb', target: '_blank' do %>
+      <i class="fa fa-facebook"></i>
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to '/insta', target: '_blank' do %>
+      <i class="fa fa-instagram"></i>
+    <% end %>
+  </li>
+</ul>
+<% end %>
+
+
 <header id="header">
   <div class="main-menu">
       <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container-fluid no-padding-xs">
 
-          <div class="navbar-header">
+          <div class="mobile-contact">
+            <%= yield :t_contact %>
+            <%= yield :t_social %>
+          </div>
+          <div class="clearfix"></div>
             <div>
               <a href="#" id="offcanvas-toggler">
                 <h4>Main Menu</h4>
@@ -20,31 +48,12 @@
           <div class="col-md-6 col-md-offset-1 col-xs-12">
             <div class="top-contact">
               <div class="col-md-7 col-md-offset-3 col-xs-12">
-                  <span class="tel-head"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: ". ", country_code: 1) %></span>
-
-                  <%= mail_to "info@hsdesignhouse.com", encode: "hex", class: 'email' do %>
-                    info@hs<span style="display:none">hexscramblewords</span>designhouse.com
-                  <% end %>
+                <%= yield :t_contact %>
               </div>
 
               <div class="col-md-2">
-                <ul class="social-links">
-                  <li>
-                    <%= link_to '/fb', target: '_blank' do %>
-                      <!-- <%=image_tag('fb1.jpg', alt: 'High Seas Design House, Orange Beach, Al - Facebook Link', class: 'social-icon') %> -->
-                      <i class="fa fa-facebook"></i>
-                    <% end %>
-                  </li>
-
-                  <li>
-                    <%= link_to '/insta', target: '_blank' do %>
-                      <!-- <%=image_tag('insta.jpg', alt: 'High Seas Design House, Orange Beach, Al - Instagram Link', class: 'social-icon') %> -->
-                      <i class="fa fa-instagram"></i>
-                    <% end %>
-                  </li>
-                </ul>
+                <%= yield :t_social %>
               </div>
-
             </div>
 
             <div class="collapse navbar-collapse" id="navbar-collapse">

@@ -2,77 +2,6 @@
 @import "mixins";
 
 
-/////////Optional Tablet Full Row Nav //////////////
-// @include bp(tb) {
-//     .logo-block {width:100%;}
-//     .logo-img{ @include center-block();}
-//     .mega-tab { @include sec-default (); text-align: center;}
-//     .megamenu-parent { float:none;
-//         li { margin: 0 12px;}
-//     }
-// }
-
-#offcanvas-toggler {
-    width: 40px;
-    float:right;
-    background-color:$white;
-    padding: 10px 0 5px;
-    text-align: center;
-    border-radius: 4px;
-    border: 1px solid $dark;
-    display:none;
-
-    h4 {color:$white; line-height:2em; padding-top:10px; }
-    h4:hover {color:$black; text-decoration:none; }
-
-    span {
-        content: '';
-        @include center-block ();
-        display: block;
-        margin-bottom: 4px;
-        width: 25px;
-        height: 3px;
-        border-radius: 4px;
-        background-color: $dark;
-    }
-}
-.offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white; background:$dark}
-.offcanvas-menu .offcanvas-inner .module .menu .nav-child a{padding:4px 25px}
-.offcanvas-menu .menu ul li{position:relative}
-
-.close-offcanvas{position:absolute; top:15px; right:15px; z-index:1; color:$white; border:2px solid #eee; border-radius:100%; width:22px; height:22px; line-height:18px; text-align:center; font-size:12px}
-.close-offcanvas:hover{background:$black; color:$white}
-
-.offcanvas-menu{width:280px; height:100%; background:darken($dark, 10%); color:$white; position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll;
-    .offcanvas-inner{padding:20px;}
-    .module{margin-top:20px;
-        ul{margin:0 -20px;
-            li { margin-bottom:15px; padding-bottom:5px; padding-left: 15px; border-bottom:1px solid rgba($white, .4);
-                a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:7px 0; padding-left:0px; color: $white; font-size: 14px; line-height: 1.5em;}
-                a:hover{background:transparent;}
-                &:first-child{margin-top:0}            }
-        }
-    }
-}
-
-.offcanvas-menu{-webkit-transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1); transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1)}
-.body-innerwrapper:after{right:0}
-.offcanvas-menu{right:-280px}
-.offcanvas .offcanvas-menu{right:0}
-.body-innerwrapper:after{position:absolute; top:0; width:0; height:0; background:rgba($black, 0.8); content:''; opacity:0; -webkit-transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; z-index:999}
-.offcanvas{width:100%; height:100%; position:relative}
-.offcanvas .body-innerwrapper:after{width:100%; height:100%; opacity:1; -webkit-transition:opacity 0.5s; transition:opacity 0.5s}
-.offcanvas .offcanvas-menu{opacity:1}
-.menu .nav-child.small{font-size:inherit}
-h3.module-title{color: $white;}
-.menu .nav-child.small{font-size:inherit}
-
-
-@include bp(md) {
-    #offcanvas-toggler { display:inline-block; }
-    nav {display: none;}
-}
-
 header {
   .main-menu {
     position: relative;
@@ -163,16 +92,14 @@ header {
   @include sec-default ();
   padding-top:10px;
   text-align: left;
-  font-weight:bold;
-    .tel-head { float: left; color: $b-gray; padding-left: 30px; font-size: 15px;font-family: $lato;
-      &:hover {color: $teal;}
-    }
-    .email { float: right; color: $b-gray; padding-right:15px; font-size: 15px;font-family: $lato;
-      &:hover {color: $teal; text-decoration: none;}
-    }
+  font-weight:bold;}
+.tel-head { float: left; color: $b-gray; padding-left: 30px; font-size: 15px;font-family: $lato;
+  &:hover {color: $teal;}
+}
+.email { float: right; color: $b-gray; padding-right:15px; font-size: 15px;font-family: $lato;
+  &:hover {color: $teal; text-decoration: none;}
 }
 
-// .mobile-contact {display: none;}
 
 ul.social-links{ padding-left: 0;
   li { display: inline-block; margin-right: 5px;
@@ -187,19 +114,77 @@ ul.social-links{ padding-left: 0;
   }
 }
 
-  // @include bp(md) {
-  //   .top-contact { display: none;}
-  //   .mobile-contact {
-  //     display: block;
-  //     padding:15px 20px;
-  //     .phone { display: inline-block; float: left;}
-  //     .mail {display: inline-block; float: right;}
-  //     .social {display: inline-block; float: none;}
-  //     .tel-head, .email, a { width: 100%; float: left; color: $b-gray;}
-  //   }
-  // }
-  // @include bp(sm) {
-  //   .mobile-contact {
-  //     .phone, .mail { width: 100%; display: block; float: none; @include center-block (); text-align: center; padding-bottom:10px;}
-  //   }
-  // }
+/////////Optional Tablet Full Row Nav //////////////
+// @include bp(tb) {
+//     .logo-block {width:100%;}
+//     .logo-img{ @include center-block();}
+//     .mega-tab { @include sec-default (); text-align: center;}
+//     .megamenu-parent { float:none;
+//         li { margin: 0 12px;}
+//     }
+// }
+.mobile-contact {display: none;}
+
+#offcanvas-toggler {
+  width: 100%;
+  float:none;
+  background-color:$teal;
+  margin-left: auto;
+  margin-right: auto;
+  display:none;
+  padding: 10px auto;
+  height: 50px;
+
+    h4 {color:$white; line-height:2em; padding-top:10px; font-family: $lato; }
+    h4:hover {color:$black; text-decoration:none; }
+    // .m-phone { color: $dark;}
+
+}
+
+.offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white; background:$dark}
+.offcanvas-menu{color:#292c2f}
+h3.module-title {color: $dark;}
+
+.offcanvas-menu .menu .parent .toggle-icon{position:absolute; right:15px; top:4px; padding:4px 6px; border:1px solid #e9e9e9; border-radius:4px; background:#f6f6f6; cursor:pointer; -webkit-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out; transition:all 0.2s ease-out}
+.offcanvas-menu .menu .parent .toggle-icon:hover{background:$dark; border-color:$dark; color:$white}
+
+.offcanvas-menu .menu .nav-child.small > li::before{display:none}
+.offcanvas-menu .offcanvas-inner .module .menu .nav-child a{padding:4px 25px}
+.offcanvas-menu .menu ul li{position:relative}
+
+.main-menu { height:auto}
+
+.close-offcanvas{position:absolute; top:15px; right:15px; z-index:1; color:#000; border:2px solid #eee; border-radius:100%; width:22px; height:22px; line-height:18px; text-align:center; font-size:12px}
+.close-offcanvas:hover{background:#000; color:#fff}
+.offcanvas-menu{width:280px; height:100%; background:#fff; color:rgba(255,255,255,0.5); position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll}
+.offcanvas-menu .offcanvas-inner{padding:20px}
+.offcanvas-menu .offcanvas-inner .module{margin-top:20px}
+.offcanvas-menu .offcanvas-inner .module ul > li{border:none; margin-bottom:10px; }
+.offcanvas-menu .offcanvas-inner .module ul > li a{border-bottom:1px dotted #e8e8e8; -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:4px 20px}
+.offcanvas-menu .offcanvas-inner .module ul > li a:hover{background:#f5f5f5}
+.offcanvas-menu .offcanvas-inner .module ul > li >a:before{display:none}
+.offcanvas-menu .offcanvas-inner .module:first-child{margin-top:0}
+.offcanvas-menu .offcanvas-inner .module .module-content > ul{margin:0 -20px}
+.offcanvas-menu .offcanvas-inner .search{margin-top:25px}
+.offcanvas-menu .offcanvas-inner .search input{width:100%; border-radius:0; border:1px solid #eee; box-shadow:none; -webkit-box-shadow:none}
+.offcanvas-menu{-webkit-transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1); transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1)}
+.body-innerwrapper:after{right:0}
+.offcanvas-menu{right:-280px}
+.offcanvas .offcanvas-menu{right:0}
+.body-innerwrapper:after{position:absolute; top:0; width:0; height:0; background:rgba(0,0,0,0.8); content:''; opacity:0; -webkit-transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; z-index:999}
+.offcanvas{width:100%; height:100%; position:relative}
+.offcanvas .body-innerwrapper:after{width:100%; height:100%; opacity:1; -webkit-transition:opacity 0.5s; transition:opacity 0.5s}
+.offcanvas .offcanvas-menu{opacity:1}
+.menu .nav-child.small{font-size:inherit}
+
+
+@include bp(md) {
+  .logo-box {@include sec-default(); padding-bottom:15px;}
+  .top-contact {display: none;}
+  #offcanvas-toggler { display:block }
+  .mobile-contact {display: block; text-align: center; padding-top:10px;
+    .tel-head, .email {@include center-block(); }
+    .email {margin-bottom: 5px; margin-top: 5px;}
+  }
+}
+

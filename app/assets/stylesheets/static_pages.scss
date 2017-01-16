@@ -1202,14 +1202,15 @@
         .sem-sec1 {
           background-attachment: scroll;
           background-position: top left;
-          height:250px;
+          height:200px;
+          margin-bottom: 15px;
           h1 { font-size: 40px; padding-top:0;}
           h2 { font-size: 20px;}
           p {font-size:15px;}
 
           .bg-over {
             padding:20px 0 40px;
-            height:250px;}
+            height:200px;}
         }
         .title-box { width: 50%;}
       }
@@ -1237,7 +1238,6 @@
           padding:30px 0px;
           p { color: $gray; font-size: 18px; font-style: italic; padding-left:10px; margin-bottom:30px;}
           h3 { color: $dark; font-weight: 800; padding-bottom: 5px; }
-
         }
 
         .campaigns {
@@ -1284,7 +1284,7 @@
           @include bp(md) {
             padding-top:10px;
 
-            .light-bg { padding: 30px 15px 15px;
+            .light-bg { padding: 30px 15px 0px;
               p {padding-left:0px;}
             }
 
@@ -1296,8 +1296,8 @@
             h3 {padding-top:0; margin-top:0;}
           }
 
-          @include bp(md) {
-            .light-bg { padding-top:0; padding-bottom:25px;}
+          @include bp(sm) {
+            .light-bg { padding-top:0; }
 
             .intro{
               .title{ font-size:30px;}
@@ -1356,6 +1356,10 @@
       }
     }
     h5 {font-family: $lato; font-size: 15px; line-height: 1.4em; }
+
+    @include bp(md) {
+      .teal { padding-left: 0px;}
+    }
 
     .contact-serve {
       @include sec-default ();

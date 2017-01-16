@@ -63,6 +63,7 @@
 @include bp(md) {
   .mobile-hide{ display: none;}
   .mobile-show{ display: block;}
+  .no-padding-xs{padding: 0;}
 }
 
 // img {max-width: 100%; height: auto; display: block;}
