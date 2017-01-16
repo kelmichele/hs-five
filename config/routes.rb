@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'ecommerce' => 'static_pages#ecommerce'
   get 'sem' => 'static_pages#sem'
   get 'squad_goals' => 'static_pages#team', as: 'squad_goals'
+  get 'contact' => 'static_pages#contact'
 
    get '/fb', to: 'links#fb'
    get '/insta', to: 'links#insta'

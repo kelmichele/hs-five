@@ -765,7 +765,7 @@
         position: absolute;
         margin: 0;
         right:-10px;
-        top:67%;
+        top:68%;
         padding-top:45px;
         background: darken($white, 5%);
         -webkit-transform-origin: left center;
@@ -1312,4 +1312,99 @@
           }
       }
     }
+}
+
+.contact {
+  background-color: $light-gray;
+  .int-header { padding: 0; background-attachment: fixed; background-repeat: repeat;
+    background-image: url(image_path('pattern3.png')); margin-bottom: 0px;
+    .hero.bg-4{background-image: url(image_path('lightning-strike.jpg')); background-position: top left; background-repeat: no-repeat; background-size: 100%; height:450px;padding-top: 100px;}
+    .page-name {font-size: 50px; font-weight:900; color:$white; font-family: $lato; margin-top:3px; text-transform: uppercase;letter-spacing: 2px;}
+    h2 {font-size:20px; font-weight:700; color:$white; margin-bottom:0px; font-family: $lato; text-transform: uppercase; letter-spacing: 1.5px; padding-left: 10px;}
+  }
+
+    @include bp(md) {
+    .int-header {background-attachment: scroll;
+      .hero.bg-4 { height:220px; padding-top:30px;}
+    }
+
+    .contact-serve {
+      margin-bottom:15px;
+      padding-top:10px;
+    }
+  }
+    @include bp(sm) {
+     .int-header {
+      .hero.bg-4 { height:160px;}
+      h2 {font-size: 17px}
+      .page-name {font-weight:700; font-size: 30px;}
+    }
+  }
+
+  .main-contact { @include sec-default (); padding:35px 0 50px; font-family: $lato; background-repeat: repeat;background-image: url(image_path('pattern10.png'));
+    .teal {background-color: $teal; margin-top:20px; padding-bottom: 15px; padding-left: 30px; height:100%;}
+    h3 {font-weight: 800;}
+    h3.location {font-size:20px; text-transform: uppercase; margin-bottom: 10px; color: $dark; font-weight: 700; }
+    address{ @include sec-default (); margin-bottom:10px;
+      .title{ font-size:14.5px; font-weight:600; color:$b-gray; margin-bottom:4px;}
+      span { @include sec-default (); padding-left:46px; font-size:16px; font-weight:600; position:relative; color: $white;
+        &:before{content:''; width:26px; height:3px; background:$light-gray; position:absolute; left:0; top:10px;}
+        i {font-size: 17px; color: $white; margin-right: 10px; margin-left: 5px;
+          &:hover {color: $silver; text-decoration: none;}
+        }
+        a:hover {text-decoration: none;}
+      }
+    }
+    h5 {font-family: $lato; font-size: 15px; line-height: 1.4em; }
+
+    .contact-serve {
+      @include sec-default ();
+      padding-top:30px;
+
+      .contact-icon { height: 60px; @include center-block ();}
+        h3 { font-size: 16px; text-align: center; font-weight: bold;}
+        &:hover{text-decoration: none; h3 {color: $teal; -webkit-transition: all .6s ease; transition: all .6s ease; }}
+        &:nth-child(3) {margin-bottom: 0;}
+    }
+    @include bp(md) {padding: 20px 0;}
+  }
+
+  .contact-join {
+    @include sec-default ();
+    background-color:#e1e1e1;
+    background-size: 52%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-image: url(image_path('desk.jpg'));
+
+    .text {
+      padding:25px 30px 20px 0px;
+    }
+
+    h3, h4, p {color: $dark; font-family: $lato;}
+
+    h3 { font-weight: 800; color: $teal; font-size: 26px;}
+    p { margin-top: 15px; font-style: italic; font-size: 15px;}
+
+    .careers {
+        @include sec-default ();
+        background-repeat: no-repeat;
+        background-image: url(image_path('ic2.png'));
+        background-size: 45%;
+        background-position: center center;
+        text-align: center;
+        height:135px;
+
+        .icon {width: 50%;}
+        h2 { font-weight: 800; color: $dark; padding-top:20px;}
+
+        &:hover { text-decoration: none;
+          background-size: 20%;
+          -webkit-transition: all .6s ease;
+          transition: all .6s ease;
+
+          h2 { color: $teal; text-shadow: 0px 1px 1px $dark; -webkit-transition: all .6s ease; transition: all .6s ease;}
+        }
+    }
+  }
 }

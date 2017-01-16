@@ -1,0 +1,136 @@
+<% @page_title = "Contact Us" %>
+<% @page_description = "High Seas is the perfect digital partner for your business. From Website and Ecommerce Design, to Digital Advertising, we deliver quality work and results!" %>
+
+<!-- <div class="container-fluid in-contact"> -->
+
+  <section class="int-header">
+      <div class="hero bg-4" data-stellar-background-ratio=".7">
+          <div class="table">
+              <div class="inner">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <h2>High Seas Design House</h2>
+                              <h1 class="page-name">Contact Us</h1>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="main-contact">
+    <div class="purple-bg"></div>
+    <div class="container">
+      <div class="col-md-10">
+        <h3>Ready to Build Something with High Seas?</h3>
+        <h5>If you are interested in more information about our services and what we can do for you, or you are looking for a quote, get in touch with our team!
+          Give us a call, stop by our office, or email us with your contact information, and a description of your project.</h5>
+      </div>
+
+      <div class="col-md-9 col-xs-12 teal">
+        <div class="col-md-12 loc1">
+          <h3 class="location">Orange Beach Location</h3>
+          <div class="col-md-6">
+            <address>
+                <h4 class="title">PHONE</h4>
+                <span><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: ". ", country_code: 1, class: 'tel' ) %></span>
+            </address>
+
+            <address>
+                <h4 class="title">ADDRESS</h4>
+                <span>4851 Wharf Pkwy <br>Suite D-230<br> Orange Beach, Al 36561</span>
+            </address>
+          </div>
+
+          <div class="col-md-6">
+             <address>
+                <%= mail_to "info@hsdesignhouse.com", encode: "hex", class: 'text-white' do %>
+                  <h4 class="title">EMAIL</h4>
+                  <span>info@hs<span style="display:none">hexscramblewords</span>designhouse.com</span>
+                <% end %>
+            </address>
+
+            <address>
+                <h4 class="title">HOURS</h4>
+                <span>Monday - Friday: 8am - 5pm</span>
+            </address>
+
+            <address>
+                <h4 class="title">FOLLOW US:</h4>
+                <span>
+                  <%= link_to '/fb', target: '_blank' do %>
+                    <i class="fa fa-facebook"></i>
+                  <% end %>
+                  <%= link_to '/insta', target: '_blank' do %>
+                    <i class="fa fa-instagram"></i>
+                  <% end %>
+                </span>
+            </address>
+          </div>
+        </div>
+
+        <div class="col-md-12 loc2">
+          <h3 class="location two">Pensacola Location</h3>
+          <div class="col-md-6">
+            <address>
+              <h4 class="title">PHONE</h4>
+              <span><%= number_to_phone(8504628431, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: ". ", country_code: 1, class: 'tel' ) %></span>
+            </address>
+          </div>
+
+          <div class="col-md-6">
+            <address>
+                <h4 class="title">ADDRESS</h4>
+                <span>3 West Garden St<br> Suite 412<br> Pensacola, Florida 32502</span>
+            </address>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-md-3 col-xs-12">
+          <div class="col-md-12 col-xs-12">
+            <%= link_to "sem", class: 'contact-serve ' do %>
+              <%=image_tag('ihsmarket.png', alt: 'High Seas Design House, Orange Beach, Al - Digital Advertising', class: 'contact-icon') %>
+              <h3>Digital Advertising</h3>
+            <% end %>
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+            <%= link_to "design", class: 'contact-serve' do %>
+              <%=image_tag('ihsdesign.png', alt: 'High Seas Design House, Orange Beach, Al - Website Design', class: 'contact-icon') %>
+              <h3>Web Design</h3>
+            <% end %>
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+              <%= link_to "ecommerce", class: 'contact-serve' do %>
+                <%=image_tag('icon-shop.png', alt: 'High Seas Design House, Orange Beach, Al - Ecommerce', class: 'contact-icon') %>
+                <h3>Ecommerce</h3>
+              <% end %>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+
+    <section class="contact-join">
+      <div class="container">
+        <div class="col-md-6 col-xs-12">
+          <div class="text">
+            <h3>Interested in Joining Our Team?</h3>
+            <h4>We love a good resumè!</h4>
+            <p>If you think High Seas is the perfect place for you, send us a copy of your resume, and tell us a little about yourself. We are always happy to hear from someone who wants to bring their talents and skills over to our team. </p>
+
+            <div class="col-md-7 col-xs-12">
+                  <%= mail_to "info@hsdesignhouse.com", "Email Us", encode: "hex", class: 'careers' do %>
+                  <h2>Get in Touch</h2>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

@@ -18,7 +18,7 @@
           </div>
 
           <div class="col-md-6 col-md-offset-1 col-xs-12">
-            <div class="top-contact mobile-hide">
+            <div class="top-contact">
               <div class="col-md-7 col-md-offset-3 col-xs-12">
                   <span class="tel-head"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: ". ", country_code: 1) %></span>
 
@@ -31,12 +31,14 @@
                 <ul class="social-links">
                   <li>
                     <%= link_to '/fb', target: '_blank' do %>
+                      <!-- <%=image_tag('fb1.jpg', alt: 'High Seas Design House, Orange Beach, Al - Facebook Link', class: 'social-icon') %> -->
                       <i class="fa fa-facebook"></i>
                     <% end %>
                   </li>
 
                   <li>
                     <%= link_to '/insta', target: '_blank' do %>
+                      <!-- <%=image_tag('insta.jpg', alt: 'High Seas Design House, Orange Beach, Al - Instagram Link', class: 'social-icon') %> -->
                       <i class="fa fa-instagram"></i>
                     <% end %>
                   </li>
