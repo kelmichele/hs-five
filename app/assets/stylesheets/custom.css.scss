@@ -132,6 +132,29 @@ footer.simple-footer {
     }
 }
 
+.scroll-up {
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    bottom: 15px;
+    right: 40px;
+    display: none;
+    text-indent: -9999px;
+    background-image: url(image_path('up.png'));
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center ;
+    background-color: $teal;
+    z-index: 100;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+
+
+    @include bp(tb) { right: 30px; }
+    @include bp(sm) { right: 15px; }
+}
+
     @include bp(md) {
     text-align: center;
     p.copyright { text-align: center;}

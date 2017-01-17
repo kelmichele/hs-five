@@ -680,7 +680,7 @@
       padding-left:10px;
       padding-right:10px;
 
-      .no-padding-r.pleft-3 { padding-left:5px; padding-right:5px;}
+      .no-padding-r.pleft-3 { padding-left:5px; padding-right:5px; }
     }
   }
 }
@@ -846,7 +846,7 @@
           .content {padding:10px}
         }
         .ecol-1 { padding:0;
-          div { width: 33%; display: inline-block;}
+          div { width: 32.3%; display: inline-block;}
         }
         .efol-img {
           display: inline-block;
@@ -940,7 +940,7 @@
             .intro-box {padding:15px;
               h3 {text-align: center;}
             }
-            .cart-sec {width: 49%; display: inline-block;
+            .cart-sec {width: 48.5%; display: inline-block;
               &.one {margin-right:10px;}
             }
             .service-link{margin-right:30px;}
@@ -973,6 +973,7 @@
 
 .design {
   .webdesign {
+    @include sec-default ();
     background-color:$white;
     background-image: url(image_path('monitor.png'));
     background-size: 55%;
@@ -1232,12 +1233,12 @@
         }
       }
       .sem-wrap {
-
         .light-bg { @include sec-default ();
           background-color: lighten($light-gray, 5%);
           padding:30px 0px;
-          p { color: $gray; font-size: 18px; font-style: italic; padding-left:10px; margin-bottom:30px;}
-          h3 { color: $dark; font-weight: 800; padding-bottom: 5px; }
+          text-align: center;
+          p { color: $gray; font-size: 18px; font-style: italic; margin-bottom:30px;}
+          h3 { color: $dark; font-weight: 800; padding-bottom: 5px; font-size: 21px; }
         }
 
         .campaigns {
@@ -1274,12 +1275,12 @@
         }
 
         .intro{ @include sec-default (); padding:10px 25px 35px 25px;
-          .title{ font-size:35px; margin-top:15px; font-weight:800; position:relative; color: $b-gray}
+          .title{ font-size:35px; margin-top:15px; font-weight:800; position:relative; color: $b-gray;font-family: $lato;}
           .title:after{content:''; width:3px; height:85px; background:#dad9e0; position:absolute; left:17px; top:23px; z-index:-1;}
-          p { padding-left:30px; color: $dark}
+          p { padding-left:30px; color: $dark; font-family: $lato;}
         }
-        h4 { color: $dark; padding-bottom: 2px; }
-
+        h4 { color: $dark; padding-bottom: 2px;font-family: $lato; }
+        p{font-family: $lato;}
 
           @include bp(md) {
             padding-top:10px;
@@ -1291,6 +1292,7 @@
             .campaigns { padding-top:10px; padding-bottom:20px;
               .no-padding-r {padding-right: 10px;}
               .sem-serv p{color: $gray; font-weight: bold;}
+              .bp-img { width:50%; display: block; padding:5px; @include center-block ();}
             }
             .intro {padding-bottom: 10px;}
             h3 {padding-top:0; margin-top:0;}
@@ -1359,7 +1361,12 @@
 
     @include bp(md) {
       .teal { padding-left: 0px;}
+      .loc1, .loc2 { width: 49.5%; display: inline-block;}
     }
+    @include bp(sm) {
+      .loc1, .loc2 { width: 100%;@include center-block(); }
+    }
+
 
     .contact-serve {
       @include sec-default ();
@@ -1370,7 +1377,13 @@
         &:hover{text-decoration: none; h3 {color: $teal; -webkit-transition: all .6s ease; transition: all .6s ease; }}
         &:nth-child(3) {margin-bottom: 0;}
     }
-    @include bp(md) {padding: 20px 0;}
+    @include bp(md) {padding: 20px 0;
+      .serv-con {display: inline-block; width: 30%;}
+    }
+
+    @include bp(sm) {
+      .serv-con {width: 90%; @include center-block();}
+    }
   }
 
   .contact-join {
@@ -1385,6 +1398,8 @@
       padding:25px 30px 20px 0px;
     }
 
+    @include bp(md) {background-image: none;text-align: center;}
+
     h3, h4, p {color: $dark; font-family: $lato;}
 
     h3 { font-weight: 800; color: $teal; font-size: 26px;}
@@ -1398,6 +1413,8 @@
         background-position: center center;
         text-align: center;
         height:135px;
+
+        @include bp(md) {background-size: 25%;}
 
         .icon {width: 50%;}
         h2 { font-weight: 800; color: $dark; padding-top:20px;}

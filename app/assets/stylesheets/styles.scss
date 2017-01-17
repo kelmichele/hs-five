@@ -82,4 +82,7 @@
 		.stretch {overflow: hidden;
 		 	img {top: 0;left: 0;position: absolute;}
 		 }
+
+    @include bp(sm) {&.coll-3 {width: 49%; }}
+    @include bp(xs) {&.coll-3 {width: 100%; @include center-block(); }}
 }

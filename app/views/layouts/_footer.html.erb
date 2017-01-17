@@ -42,13 +42,14 @@
                 <p class="copyright">&copy; <%= Time.now.year %> High Seas Design House. All rights reserved. </p>
 
 
-                <%= link_to '#header', class: 'backtop' do %>
+              <!--   <%= link_to '#header', class: 'backtop' do %>
                     <%=image_tag('up.png', alt: 'High Seas Design House, Back to top', class: 'icon-up') %>
-                <% end %>
+                <% end %> -->
 
             </div>
         </div>
     </div>
+    <a href="#" class="scroll-up">Scroll</a>
 </footer>
 
 <div class="offcanvas-menu">
@@ -60,10 +61,10 @@
             <div class="module-content">
               <ul class="nav menu">
                 <li class="menu-item first"><%= link_to "Home", root_path %></li>
-                <li class="menu-item"><%= link_to "About Us", about_path %></li>
                 <li class="menu-item"><%= link_to "Ecommerce", ecommerce_path %></li>
                 <li class="menu-item"><%= link_to "Web Design", design_path %></li>
                 <li class="menu-item"><%= link_to "Digital Advertising", sem_path %></li>
+                <li class="menu-item"><%= link_to "About Us", about_path %></li>
                 <li class="menu-item"><%= link_to "Our Team", squad_goals_path %></li>
                 <li class="menu-item"><%= link_to "Our Work", clients_path %></li>
                 <li class="menu-item"><%= link_to "Contact", contact_path %></li>
