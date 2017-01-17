@@ -83,6 +83,9 @@
 		 	img {top: 0;left: 0;position: absolute;}
 		 }
 
-    @include bp(sm) {&.coll-3 {width: 49%; }}
+    @include bp(sm) {
+    	&.coll-3 {width: 49%; }
+    	.box {margin: 5px 5px;}
+    }
     @include bp(xs) {&.coll-3 {width: 100%; @include center-block(); }}
 }

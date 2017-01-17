@@ -1378,11 +1378,15 @@
         &:nth-child(3) {margin-bottom: 0;}
     }
     @include bp(md) {padding: 20px 0;
-      .serv-con {display: inline-block; width: 30%;}
+      .servcon-holder {width: 80%; @include center-block();}
+      .serv-con {display: inline-block; width: 32%;
+        h3 {font-size: 14px;}
+        .contact-icon { height: 45px;}
+      }
     }
 
-    @include bp(sm) {
-      .serv-con {width: 90%; @include center-block();}
+    @include bp(xs) {
+      .servcon-holder {display: none;}
     }
   }
 
