@@ -1364,7 +1364,12 @@
       .loc1, .loc2 { width: 49.5%; display: inline-block;}
     }
     @include bp(sm) {
-      .loc1, .loc2 { width: 100%;@include center-block(); }
+      .loc1, .loc2 { @include sec-default (); }
+      .loc2 {padding-top:10px;}
+
+      address span { padding-left:25px;
+        &:before{ width:15px; }
+      }
     }
 
 
@@ -1384,10 +1389,7 @@
         .contact-icon { height: 45px;}
       }
     }
-
-    @include bp(xs) {
-      .servcon-holder {display: none;}
-    }
+    @include bp(sm) {.servcon-holder {display: none;}}
   }
 
   .contact-join {
