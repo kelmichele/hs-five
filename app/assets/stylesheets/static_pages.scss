@@ -686,10 +686,17 @@
 }
 
 .team {
+  // .team-h1 {
+  //     @include sec-default(); height: 200px; padding: 20px 0; background-color: $dark;
+  //     background-image: url(image_path('startup6-bw.jpg')); background-position: center right; background-repeat: no-repeat; background-size: 70%;
+  //     h1 {text-transform: uppercase; font-family: $raleway; font-size: 45px; color: $white; font-weight: 800; padding-top: 30px;}
+  // }
   .team-h1 {
-      @include sec-default(); height: 200px; padding: 20px 0; background-color: $dark;
-      background-image: url(image_path('startup6-bw.jpg')); background-position: center right; background-repeat: no-repeat; background-size: 70%;
-      h1 {text-transform: uppercase; font-family: $raleway; font-size: 45px; color: $white; font-weight: 800; padding-top: 30px;}
+    @include sec-default(); height: 300px; padding: 20px 0; background-color: $dark;
+    background-image: url(image_path('startup6-bw.jpg')); background-position: center right; background-repeat: no-repeat; background-size: 65%;
+    h1 {text-transform: uppercase; font-family: $raleway; font-size: 45px; color: $white; font-weight: 800; }
+    h5 {color: $light-gray; font-family: $raleway; line-height: 1.3em; font-size: 15px;}
+    p, a {color: $teal; font-family: $raleway; line-height: 1.3em; padding-top:10px; font-weight: 600; font-size: 16px;}
   }
   @include bp(md) {
     .team-h1 {

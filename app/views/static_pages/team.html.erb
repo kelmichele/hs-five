@@ -4,7 +4,20 @@
 
 <section class="team-h1">
     <div class="container-fluid">
-        <h1>Meet Our Team</h1>
+        <div class="col-md-4 col-xs-12">
+            <h1>Meet Our Team</h1>
+            <!-- <h5>Our team is made up of creativity and talent. If you think High Seas is the perfect place for you, send us a copy of your resume, and tell us a little about yourself.</h5>
+            <h5>We are always happy to hear from someone who wants to bring their talents and skills over to our team.</h5>
+
+            <div class="col-md-6 col-xs-12">
+                <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %></p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <%= mail_to "info@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                    info@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                <% end %>
+            </div> -->
+        </div>
     </div>
 </section>
 <div class="clearfix"></div>
@@ -130,18 +143,35 @@
         </li>
 
         <li>
-            <figure class="invite">
-                <div><%=image_tag( 'team/color-text.jpg', alt: 'HSDH Portfolio', class: 'img-responsive') %></div>
+            <figure>
+                <div><%=image_tag( 'team/color-fuller.jpg', alt: 'HSDH Portfolio Fuller Talbot', class: 'img-responsive') %></div>
                 <figcaption>
-                    <h5>Our team is made up of creativity and talent. If you think High Seas is the perfect place for you, send us a copy of your resume, and tell us a little about yourself.<br><br>
-                    We are always happy to hear from someone who wants to bring their talents and skills over to our team.</h5>
+                    <h3>Fuller <br><span>Talbot</span></h3>
+                    <!-- <p class="title">Account Manager</p> -->
+                    <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %>
+                    <br>
+                    <span>Ext. 710</span></p>
 
+                    <%= mail_to "fuller@hsdesignhouse.com", encode: "hex", class: 'email' do %>
+                        fuller@hs<span style="display:none">hexscramblewords</span>designhouse.com
+                    <% end %>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li class="text-invite">
+            <figure class="invite">
+                <h5>Our team is made up of creativity and talent. If you think High Seas is the perfect place for you, send us a copy of your resume, and tell us a little about yourself.
+                We are always happy to hear from someone who wants to bring their talents and skills over to our team.</h5>
+
+                <div class="col-md-6 col-xs-12">
                     <p class="phone"><%= number_to_phone(2515170330, pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", area_code: true) %></p>
-
+                </div>
+                <div class="col-md-6 col-xs-12">
                     <%= mail_to "info@hsdesignhouse.com", encode: "hex", class: 'email' do %>
                         info@hs<span style="display:none">hexscramblewords</span>designhouse.com
                     <% end %>
-                </figcaption>
+                </div>
             </figure>
         </li>
     </ul>

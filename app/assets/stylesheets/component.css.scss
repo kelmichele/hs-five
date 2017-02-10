@@ -7,6 +7,7 @@
 	list-style: none;
 	text-align: center;
 	@include center-block();
+	padding-bottom:25px;
 
 	li {
 		display: inline-block;
@@ -130,20 +131,16 @@
 	transition: transform 0.4s, opacity 0.1s;
 }
 
-.cs-style-4 figure.invite {
-	figcaption {
-		padding:40px 20px 20px;
-		width: 80%;
-		opacity: 1;
-		-webkit-transform: rotateY(0deg);
-		-moz-transform: rotateY(0deg);
-		transform: rotateY(0deg);
-
-		h5{font-size: 16px; line-height: 1.4em; margin-bottom: 25px; font-family: $raleway;}
-
-		a {position: relative; margin-top: 30px; margin-left: 5%;}
-	}
+li.text-invite {width: 87.3%; padding-top: 0; background-color: #03b69d;}
+figure.invite {
+	padding:20px 15px 10px;
+	@include center-block();
+	text-align: center;
+	width: 100%;
+	h5{font-size: 16px; line-height: 1.4em; margin-bottom: 15px; font-family: $raleway; color: $white;}
+	p, a {color: $dark; font-weight: 600; font-family: $raleway; position: relative; text-align: center; float: none; font-size: 16px; }
 }
+
 
 @include bp(md) {
 	.cs-style-4 {
@@ -201,7 +198,4 @@
 	}
 	.cs-style-4 figure.invite figcaption { p.phone {width:100%; padding-bottom:5px;}}
 }
-
-
-
 
