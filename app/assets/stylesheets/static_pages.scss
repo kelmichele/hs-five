@@ -9,143 +9,48 @@
 
 
 .home {
-  .homesec-video {
-    @include sec-default ();
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
+  .homesec-video { @include sec-default (); background-color: #f7f7f7; overflow: hidden; position: relative; height: 38vh;
     .video-over, .video-holder,
-    .video-holder .video-frame {
-      @include sec-default ();
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-    .video-holder {
-      overflow: hidden;
-    }
+    .video-holder .video-frame {@include sec-default (); position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+    .video-holder {@include sec-bgimage ();overflow: hidden;}
 
     .over-holder {
-      @include sec-default ();
-      padding: 100px 0;
-      margin-top:10%;
-      width: 100%;
-      height: 100%;
-      background-image: url(image_path('hsdh-opac.png'));
-      background-size: 35%;
-      background-position: left center;
-      background-repeat: no-repeat;
+      @include sec-default (); padding: 100px 0; margin-top:10%; width: 100%; height: 100%;
+      background-image: url(image_path('hsdh-opac.png'));background-size: 35%;background-position: left center;background-repeat: no-repeat;
 
       .welcome {
         @include sec-default ();
         padding: 20px 0;
 
-        h1 {
-          margin-bottom: 0;
-          padding-bottom: 0;
-          text-transform: uppercase;
-          color: $white;
-          font-family: $lato;
-          font-size: 110px;
-          line-height: .8em;
-          font-weight: 900;
-          letter-spacing: 5px;
-          .sm {
-            font-weight: 800;
-            font-size: 68px;
-            letter-spacing: 9px;
-            color: $white;
-          }
+        h1 {margin-bottom: 0; padding-bottom: 0; text-transform: uppercase; color: $white; font-family: $lato; font-size: 110px; line-height: .8em; font-weight: 900; letter-spacing: 5px;
+          .sm {font-weight: 800; font-size: 68px; letter-spacing: 9px; color: $white;}
         }
         h3 {margin-top: 5px;font-weight: 300; font-size: 50px; color: $white; font-family: $poppins; }
       }
     }
-
-    @include bp(md) {
-      .video-holder {
-        @include sec-bgimage ();
-        background-image: url(image_path('mobile-bg2.png'));
-        .video-frame{display: none;}
-      }
-
-      .over-holder { padding: 10px 0;
-        .welcome {
-          padding: 40px 0;
-          h1, h1 .sm { font-size: 40px; line-height: 1.1em; letter-spacing: 1px;}
-          h3 {font-size: 30px; }
-        }
-      }
-    }
-
-    @include bp(sm) {
-    // @media only screen and (max-width:640px) {
-      height:45vh;
-      .video-holder { background-image: url(image_path('mobile-bg2xs.png'));}
-      .over-holder { margin-top:25px;
-        .welcome {
-          padding: 40px 0;
-          h1, h1 .sm { font-size: 25px; line-height: 1.1em; letter-spacing: normal; font-weight: 800;}
-          h3 {font-size: 20px; }
-        }
-      }
-    }
-    @media only screen and (max-width: 570px) {
-      // height:75vh;
-    }
-    @include bp(xs) {
-    // @media only screen and (max-width: 320px) {
-       height:40vh;
-    }
   }
 
   .border-slope {
-    overflow: hidden;
-    width: 110%;
-    position: absolute;
-    display: block;
-    bottom:0;
-    right:-15px;
-    margin: 0;
-    padding-top:40px;
-    background: $white;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    -ms-transform-origin: left center;
-    transform-origin: left center;
-    -webkit-transform: rotate(-3deg);
-    -moz-transform: rotate(-3deg);
-    -o-transform: rotate(-3deg);
-    -ms-transform: rotate(-3deg);
-    transform: rotate(-3deg);
-    margin-bottom:-220px;
-    box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
+    overflow: hidden; width: 110%; position: absolute; display: block; bottom:0; right:-15px; margin: 0; padding-top:40px; background: $white;
+    -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; -ms-transform-origin: left center; transform-origin: left center;
+    -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg);
+    margin-bottom:-220px; box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
 
-    .slope {
-      margin:0 auto;
-      -webkit-transform: rotate(3deg);
-      -moz-transform: rotate(3deg);
-      -o-transform: rotate(3deg);
-      -ms-transform: rotate(3deg);
-      transform: rotate(3deg);
-      padding:90px 0px 80px 30px;
+    .slope {margin:0 auto;padding:90px 0px 80px 30px;
+      -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg);
     }
-
-    @media only screen and (max-width: 570px) { display: none; }
   }
 
   .home-slope {
     @include sec-default ();
     background-color: $white;
-    padding: 30px 0px 50px 0px;
+    padding: 60px 0px;
 
-    .intro {
-      @include sec-default ();
-      padding: 60px 0 80px 25px;
-      color: $dark;
-    }
+    .hsdh{width: 90%; @include center-block();}
+    .tm-vid {width: 85%; @include center-block();}
+    .left-txt, .vid-blk {width: 90%; @include center-block(); text-align: center; margin-top:20px;}
+
+    .intro {@include sec-default ();color: $dark;}
     h3 {color: $gray; font-size:27px; letter-spacing: 3px; line-height: 1em; margin-top: 0; font-weight: 800; font-family: $raleway; text-transform: uppercase;}
     p {color: $gray; font-size:18px; font-family: $pro; font-style: italic; }
     h2 {
@@ -158,43 +63,17 @@
     .gears {padding: 70px 0px 0 15px;}
 
     .about-link{
-      padding:15px;
-      border:1px outset darken($teal,12%);
-      width: 45%;
+      padding:10px 15px;
+      border-radius: 5px;
+      width: 40%;
       text-align: center;
       color: $white;
       font-size: 18px;
       background-color: $teal;
+      @include center-block();
       &:hover { text-decoration: none; font-weight: bold; background-color: $white; color: $teal;
       -webkit-transition: all .4s ease;
       transition: all .4s ease;}
-    }
-
-    @include bp(md) {
-      padding-top:0;
-      padding-bottom:70px;
-      .intro {padding-bottom:25px;}
-    }
-
-    @include bp(sm) {
-    // @media only screen and (max-width:640px) {
-      background-size: 40%;
-      .intro {padding-left:15px;}
-      h3 {font-size:22px; }
-      p {color: $gray; font-size:18px; font-family: $pro; font-style: italic; }
-      h2 {font-size: 30px;}
-    }
-
-    @media only screen and (max-width: 570px) {
-      margin-top: 0;
-      .intro { padding-top: 25px;}
-    }
-    @include bp(xs) {
-    // @media only screen and (max-width: 320px) {
-      padding-bottom: 15px;
-      h2 { font-size: 20px;}
-       .gears {padding: 25px 0px 0 5px;}
-
     }
   }
   .hcontent-body {
@@ -221,21 +100,21 @@
       font-family: $raleway; text-transform: uppercase;
       font-size: 45px;
     }
-    @include bp(md) {
-      background-image: url(image_path('workspacebw-mob.jpg'));
-      background-attachment: scroll;
-      background-color: $b-gray;
-      .hcontent-inner {padding:10px;}
-      .title-head { padding: 25px; margin-bottom:15px;}
-    }
-    @include bp(sm) {
-      .title-head { padding: 25px 0; margin-bottom:15px;}
-       h2 { font-size: 25px; }
-    }
-    @include bp(xs) {
-      .col-md-4.col-xs-12 { padding: 0;}
-      .col-md-12.col-xs-12 { padding: 0;}
-    }
+    // @include bp(md) {
+    //   background-image: url(image_path('workspacebw-mob.jpg'));
+    //   background-attachment: scroll;
+    //   background-color: $b-gray;
+    //   .hcontent-inner {padding:10px;}
+    //   .title-head { padding: 25px; margin-bottom:15px;}
+    // }
+    // @include bp(sm) {
+    //   .title-head { padding: 25px 0; margin-bottom:15px;}
+    //    h2 { font-size: 25px; }
+    // }
+    // @include bp(xs) {
+    //   .col-md-4.col-xs-12 { padding: 0;}
+    //   .col-md-12.col-xs-12 { padding: 0;}
+    // }
   }
 
   .home-service {
@@ -244,80 +123,47 @@
     padding-right: 20px;
     margin-bottom: 30px;
 
-    .content {  background: $cream; height:410px; padding: 20px 30px;}
-
+    .content {  background: $cream;padding: 20px 30px;}
     .hs-icon {
       @include center-block ();
       height:90px;
       padding-bottom: 15px;
-
       &.tall { height:100px;}
     }
 
-    .overlay { @include sec-default (); opacity: 0; padding: 0; background-color: $cream;
-      .service-link { text-align: center; @include center-block (); padding:10px;}
-    }
+    .service-link { width:70%; text-align: center; @include center-block (); padding:10px;}
 
     &:hover {
       .title {
-        -webkit-transform: scale(1.07);
-        -ms-transform: scale(1.07);
-        transform: scale(1.07);
-        -webkit-transition: all .5s ease;
-        transition: all .5s ease;
-
+        -webkit-transform: scale(1.03); -ms-transform: scale(1.03); transform: scale(1.03);
+        -webkit-transition: all .3s ease; transition: all .3s ease;
         .title-a:hover { text-decoration: none;}
       }
-
-      .overlay {
-        opacity: 1;
-        -webkit-transition: all .25s linear;
-        transition: all .25s linear;
-        transform: translateY(3px) ;
-        -ms-transform: translateY(3px) ;
-        -webkit-transform: translateY(3px) ;
-        position: relative;
-         -webkit-transition: all .5s ease;
-        transition: all .5s ease;
-      }
     }
 
-    h2 {
-      font-weight: 600; color: $gray;
-      line-height: 1.2em;
-      font-family: $raleway; text-transform: uppercase;
-      font-size: 25px;
-      text-align: center;
+    h2 {font-weight: 600; color: $gray; line-height: 1.2em; font-family: $raleway; text-transform: uppercase; font-size: 25px; text-align: center;}
+    p {font-family: $pro; color: $gray; font-size:16px;
+      &.visible {padding:0 10px 10px; margin-bottom: 10px;}
     }
 
-    p {
-      font-family: $pro;
-      color: $gray;
-      font-size:16px;
-      &.visible {padding:10px; margin-bottom: 5px; padding-bottom:0}
-    }
-
-    @include bp(md) {
-      .overlay { display: none;}
-      .content { height: 300px;}
-      .hs-icon {
-        @include center-block ();
-        width: 75px;
-        height:75px;
-        padding-bottom: 10px;
-      }
-      p.visible {padding:0px; margin-bottom: 5px; }
-    }
-    @include bp(sm) {
-      padding:0;
-      .content { height:auto; padding: 20px;}
-    }
+    // @include bp(md) {
+    //   .overlay { display: none;}
+    //   .content { height: 300px;}
+    //   .hs-icon {
+    //     @include center-block ();
+    //     width: 75px;
+    //     height:75px;
+    //     padding-bottom: 10px;
+    //   }
+    //   p.visible {padding:0px; margin-bottom: 5px; }
+    // }
+    // @include bp(sm) {
+    //   padding:0;
+    //   .content { height:auto; padding: 20px;}
+    // }
   }
 
-  .partners{ @include sec-default (); background-color: $white;
-    background-image: url(image_path('pattern10.png'));
-    background-repeat: repeat;
-    background-position: top left;
+  .partners{ @include sec-default (); background-color: $white; background-image: url(image_path('pattern10.png')); background-repeat: repeat; background-position: top left;
 
     .left {
       @include sec-default ();
@@ -331,7 +177,9 @@
       padding-top:10px;
       padding-left:30px;
     }
-    .service-link { @include center-block ();}
+    .service-link {
+      display: inline-block; width: 40%; margin: 0 10px; float: none;
+    }
     .service-link:hover { background-color: $teal; color: $white; border:1px solid $dark;}
     .p-img { width: 30%;  display: inline-block;
       border-right: 1px solid #dfdfdf;
@@ -340,24 +188,164 @@
     }
     hr.small {display: none;}
 
-    @include bp(md) {
-      .service-link { float: left; display: inline-block; width: 40%; margin-left:20px;
-          &.one {margin-right:15px;}
+    // @include bp(md) {
+    //   .service-link { float: left; display: inline-block; width: 40%; margin-left:20px;
+    //       &.one {margin-right:15px;}
+    //   }
+    // }
+
+    // @include bp(sm) {
+    //   .service-link { display: block; width: 90%; @include center-block ();}
+    //   .p-img { width: 49%; border:0;
+    //     &.xsbord{border-right:1px solid #dfdfdf;}
+    //   }
+    //   hr.large {display: none;}
+    //   hr.small {display: block;}
+    // }
+    // @include bp(xs) {
+    //   .service-link { display: block; float: left;}
+    // }
+  }
+
+  @include bp(dt) {
+    .homesec-video {height: 100vh;}
+
+    .home-slope {
+      .hsdh{width: 85%; }
+      .left-txt, .vid-blk {display: inline-block; float: left; width: 50%;}
+      .vid-blk {float: right;}
+      .intro { padding-right: 20px;}
+    }
+  }
+
+  @include bp(tb) {
+    .homesec-video {
+      .video-holder {
+        background-image: url(image_path('mobile-bg2.png'));
+        .video-frame{display: none;}
+      }
+
+      .over-holder { padding: 10px 0;
+        .welcome {
+          padding: 40px 0;
+          h1, h1 .sm { font-size: 40px; line-height: 1.1em; letter-spacing: 1px;}
+          h3 {font-size: 30px; }
+        }
+      }
+    }
+    .border-slope {margin-top: 0;}
+
+    .home-slope { padding: 40px 0;
+      .intro {margin-bottom:30px;}
+      h2 {font-size: 40px; br{display: none;}}
+      p {margin-bottom: 20px;}
+    }
+
+    .hcontent-body {background-image: url(image_path('workspacebw-mob.jpg'));background-attachment: scroll;background-color: $b-gray;
+      .hcontent-inner {padding:10px 5px;}
+      h2 {font-size: 40px;}
+      .mob-stack{padding:0;}
+      .title-head {padding: 30px }
+    }
+
+    .home-service {
+      padding: 0px 10px; margin-bottom: 10px;
+      .content { padding: 15px;
+        .title h2 {font-size: 22px;}
+        p.visible {padding: 0; margin-bottom: 20px;}
+        hr {margin: 15px 0 }
+      }
+      .overlay { opacity: 1; width:100%;}
+
+      .hs-icon {
+        width: auto; height: 75px;padding-bottom: 10px;
+        &.tall {height: 75px;}
       }
     }
 
-    @include bp(sm) {
-      .service-link { display: block; width: 90%; @include center-block ();}
-      .p-img { width: 49%; border:0;
-        &.xsbord{border-right:1px solid #dfdfdf;}
+    .partners { padding-bottom: 20px;
+      .container-fluid{padding:0;}
+      .lft {width: 100%; margin-bottom: 30px;}
+      .rt {width:100%; padding:0;}
+      .service-link{width:22%;}
+      .left {padding: 0px;
+        h2 { padding-bottom: 10px; font-size: 25px; }
       }
-      hr.large {display: none;}
-      hr.small {display: block;}
-    }
-    @include bp(xs) {
-      .service-link { display: block; float: left;}
+      .right {padding: 0; text-align: center;}
+      .p-img { padding: 0px 6px; border-right:none; float: none;width: 15%;}
+      hr.small, hr.large {display: none;}
     }
   }
+
+  @include bp(md) {
+    .homesec-video {
+      .video-holder {background-position: bottom right;}
+      .over-holder {background-size: 30%;
+        .welcome {padding-left: 14%;}
+        h1, h3 {text-shadow: 0px 1px 1px rgba($black, .8);}
+      }
+    }
+
+    .border-slope {padding-top:50px;}
+
+    .home-slope { padding: 30px 0 40px;
+      .intro {padding: 0px;}
+      h2 {font-size: 27px; }
+      p {font-size: 16px;}
+    }
+
+    .hcontent-body {
+      h2 {font-size: 30px;}
+      h3{font-size: 22px;}
+      .mob-stack {width: 95%; @include center-block();}
+    }
+    .home-service { margin-bottom:30px;
+      .content {padding: 15px 25px;
+        .title h2 {font-size: 19px;}
+      }
+      .hs-icon {height: 35px; padding-bottom:5px;
+        &.tall {height: 40px;}
+      }
+      .service-link {width:35%;}
+    }
+
+    .partners {
+      .left {
+        .service-link {width:35%;}
+      }
+    }
+  }
+
+  @include bp(pl) {
+    .homesec-video {height: 55vh;
+      .over-holder {background-size: 25%; margin-top: 5px;
+        .welcome {padding-left: 10%;}
+      }
+    }
+    .border-slope {display: none;}
+
+    .home-slope { padding: 20px 0;
+      h2 {font-size: 24px; }
+      h3{font-size: 20px;}
+      p {font-size: 15px;}
+      .about-link {padding:7px 0;}
+    }
+
+    .hcontent-body {
+      h2 {font-size: 25px;}
+      .title-head {padding: 15px 0;}
+      .mob-stack {width: 100%;}
+    }
+  }
+
+  @include bp(mb) {
+    .homesec-video {height: 55vh;
+      .over-holder {background-size: 20%;
+        .welcome {padding-left: 10%;}
+      }
+    }
+  }
+
 }
 
 .about {

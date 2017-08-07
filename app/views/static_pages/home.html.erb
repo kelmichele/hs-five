@@ -2,177 +2,159 @@
 <% @page_description = "High Seas Design House is a full-service, digital agency in Orange Beach, Al. We specialize in Website and Ecommerce Design, and Digital Advertising." %>
 
 
-  <section class="homesec-video">
-    <div class="video-holder">
-      <div class="video-frame">
-        <div class="video mute loop bg-video">
-            <%= video_tag "tl-test.mp4", width: "100%", height: "100%", autoplay: true, loop: "loop" %>
-        </div>
+<section class="homesec-video">
+  <div class="video-holder">
+    <div class="video-frame">
+      <div class="video mute loop bg-video">
+          <%= video_tag "tl-test.mp4", width: "100%", height: "100%", autoplay: true, loop: "loop" %>
       </div>
     </div>
+  </div>
 
-    <div class="video-over">
-      <div class="container">
-        <div class="over-holder">
-          <div class="col-md-8 col-md-offset-3 col-xs-12">
-            <div class="welcome" data-animate="fadeInUp" data-delay="300">
-              <h1>High Seas
-                <span class="sm">Design House</span>
-              </h1>
-              <h3>Digital Operations Support</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="border-slope">
-      <div class="slope"></div>
-    </div>
-  </section>
-
-  <section class="home-slope">
+  <div class="video-over">
     <div class="container">
-      <div class="col-md-6 col-xs-12">
-        <div class="intro wow fadeInLeft" data-wow-delay="0.1s">
-          <h2>The Full Service, <br> <span>Digital Agency</span></h2>
-          <h3>You've Been Searching For</h3>
-          <p>Combining innovative ideas, with technical knowledge. <br>
-            Our team likes making complicated things. Not making things complicated.</p>
-
-          <div class="col-md-9 col-md-offset-3 col-xs-12 p-top-2">
-            <%= link_to "about", class: 'about-link' do %>
-              More About Us
-            <% end %>
+      <div class="over-holder">
+        <div class="col-md-8 col-md-offset-3 col-xs-12">
+          <div class="welcome" data-animate="fadeInUp" data-delay="300">
+            <h1>High Seas
+              <span class="sm">Design House</span>
+            </h1>
+            <h3>Digital Operations Support</h3>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="col-md-6 col-xs-12">
-         <%=image_tag( 'gears.png', alt: 'High Seas Design House, Orange Beach, Al - Digital Solutions Agency' , class: 'img-responsive gears') %>
+  <div class="border-slope">
+    <div class="slope"></div>
+  </div>
+</section>
+
+<section class="home-slope">
+  <div class="hsdh">
+    <!-- <div class="col-md-6 col-xs-12 left-txt"> -->
+    <div class="left-txt">
+      <div class="intro wow fadeInLeft" data-wow-delay="0.1s">
+        <h2>The Full Service, <br> <span>Digital Agency</span></h2>
+        <h3>You've Been Searching For</h3>
+        <p>Combining innovative ideas, with technical knowledge. <br>
+          Our team likes making complicated things. Not making things complicated.</p>
+
+        <%= link_to "about", class: 'about-link' do %>
+          More About Us
+        <% end %>
       </div>
     </div>
-  </section>
+
+    <!-- <div class="col-md-6 col-xs-12 rt-img"> -->
+    <div class="vid-blk">
+      <!-- <%=image_tag( 'gears.png', alt: 'High Seas Design House, Orange Beach, Al - Digital Solutions Agency' , class: 'img-responsive gears') %> -->
+      <iframe height="315" src="https://www.youtube.com/embed/R0rSwzek12g?rel=0&showinfo=0" class="tm-vid" frameborder="0" allowfullscreen></iframe>
+      <!-- ?rel=0&modestbranding=0&autohide=1&showinfo=0 -->
+    </div>
+  </div>
+</section>
 
 <section class="hcontent-body">
   <div class="hcontent-inner">
     <div class="container-fluid">
 
-      <div class="col-md-12 col-xs-12">
-          <div class="title-head">
-              <h2>What Can High Seas<br class="mobile-hide"> Do For You?</h2>
+      <div class="title-head">
+        <h2>What Can High Seas<br class="mobile-hide"> Do For You?</h2>
+      </div>
+
+      <div class="col-md-4 col-xs-12 mob-stack">
+          <div class="home-service dmarket wow fadeInUp" data-wow-delay="0.1s">
+            <div class="content">
+              <div class="title">
+                <%= link_to "sem", class: 'title-a' do %>
+                  <%=image_tag('ihsmarket.png', alt: 'High Seas Design House, Orange Beach, Al - Digital Advertising', class: 'hs-icon') %>
+                  <h2>Digital Advertising</h2>
+                <% end %>
+              </div>
+              <hr>
+
+              <p class="visible">We offer tremendously effective digital advertising services. Experience a compelling spike in your business with the help of our powerful digital solutions, Google AdWords campaigns, SEO, and remarketing tools.</p>
+
+              <%= link_to "sem", class: 'service-link' do %>
+                <span>Learn More</span>
+              <% end %>
+            </div>
           </div>
       </div>
 
-      <div class="col-md-12 col-xs-12">
-
-        <div class="col-md-4 col-xs-12">
-            <div class="home-service dmarket wow fadeInUp" data-wow-delay="0.1s">
-              <div class="content">
-                <div class="title">
-                  <%= link_to "sem", class: 'title-a' do %>
-                    <%=image_tag('ihsmarket.png', alt: 'High Seas Design House, Orange Beach, Al - Digital Advertising', class: 'hs-icon') %>
-                    <h2>Digital Advertising</h2>
-                  <% end %>
-                </div>
-                <hr>
-
-                <p class="visible">We offer tremendously effective digital advertising services. Experience a compelling spike in your business with the help of our powerful digital solutions, Google AdWords campaigns, SEO, and remarketing tools.</p>
-
-                  <div class="overlay">
-                    <div class="col-xs-12">
-                      <%= link_to "sem", class: 'service-link' do %>
-                        <span>Learn More</span>
-                      <% end %>
-                    </div>
-                  </div>
+      <div class="col-md-4 col-xs-12 mob-stack">
+          <div class="home-service website wow fadeInUp" data-wow-delay="0.2s">
+            <div class="content">
+              <div class="title">
+                <%= link_to "design", class: 'title-a' do %>
+                  <%=image_tag('ihsdesign.png', alt: 'High Seas Design House, Orange Beach, Al - Web Design', class: 'hs-icon') %>
+                  <h2>Web Design</h2>
+                <% end %>
               </div>
+              <hr>
+
+              <p class="visible">Our team aims to design engaging, purpose driven websites for our clients, that help promote their businesses, and achieve their goals. We create responsive sites that function seamlessly on any computer, tablet, or smartphone.</p>
+
+              <%= link_to "design", class: 'service-link' do %>
+                <span>Learn More</span>
+              <% end %>
             </div>
-        </div>
+          </div>
+      </div>
 
-        <div class="col-md-4 col-xs-12">
-            <div class="home-service website wow fadeInUp" data-wow-delay="0.2s">
-              <div class="content">
-                <div class="title">
-                  <%= link_to "design", class: 'title-a' do %>
-                    <%=image_tag('ihsdesign.png', alt: 'High Seas Design House, Orange Beach, Al - Web Design', class: 'hs-icon') %>
-                    <h2>Web Design</h2>
-                  <% end %>
-                </div>
-                <hr>
-
-                <p class="visible">Our team aims to design engaging, purpose driven websites for our clients, that help promote their businesses, and achieve their goals. We create responsive sites that function seamlessly on any computer, tablet, or smartphone.</p>
-
-                  <div class="overlay">
-                    <div class="col-xs-12">
-                      <%= link_to "design", class: 'service-link' do %>
-                        <span>Learn More</span>
-                      <% end %>
-                    </div>
-                  </div>
+      <div class="col-md-4 col-xs-12 mob-stack">
+          <div class="home-service ecommerce wow fadeInUp" data-wow-delay="0.3s">
+            <div class="content">
+              <div class="title">
+                <%= link_to "ecommerce", class: 'title-a' do %>
+                <%=image_tag('ihsshop.png', alt: 'High Seas Design House, Orange Beach, Al - Ecommerce Stores', class: 'hs-icon tall') %>
+                  <h2>Ecommerce</h2>
+                <% end %>
               </div>
+              <hr>
+
+              <p class="visible">When it comes to Ecommerce, our team feels right at home. We have developed a significant Ecommerce background, with experience in a number of the various platforms. High Seas can be a huge asset to Ecommerce projects of any size. </p>
+
+              <%= link_to "ecommerce", class: 'service-link' do %>
+                <span>Learn More</span>
+              <% end %>
             </div>
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-            <div class="home-service ecommerce wow fadeInUp" data-wow-delay="0.3s">
-              <div class="content">
-                <div class="title">
-                  <%= link_to "ecommerce", class: 'title-a' do %>
-                  <%=image_tag('ihsshop.png', alt: 'High Seas Design House, Orange Beach, Al - Ecommerce Stores', class: 'hs-icon tall') %>
-                    <h2>Ecommerce</h2>
-                  <% end %>
-                </div>
-                <hr>
-
-                <p class="visible">When it comes to Ecommerce, our team feels right at home. We have developed a significant Ecommerce background, with experience in a number of the various platforms. High Seas can be a huge asset to Ecommerce projects of any size. </p>
-
-                  <div class="overlay">
-                    <div class="col-xs-12">
-                      <%= link_to "ecommerce", class: 'service-link' do %>
-                        <span>Learn More</span>
-                      <% end %>
-                    </div>
-                  </div>
-              </div>
-            </div>
-        </div>
+          </div>
       </div>
     </div>
   </div>
 </section>
 
-  <section class="partners">
-    <div class="container-fluid">
-      <div class="col-md-5 col-xs-12">
-        <div class="left">
-          <h2>Let's Build Something Together</h2>
-          <div class="col-md-6">
-            <%= link_to "contact#contact", class: 'service-link one' do %>
-              <span>Request a Quote</span>
-            <% end %>
-          </div>
-          <div class="col-md-6">
-            <%= mail_to "info@hsdesignhouse.com", "Email Us", encode: "hex", class: 'service-link two' do %>
-              <span>Send Your Resume</span>
-            <% end %>
-          </div>
-        </div>
-      </div>
+<section class="partners">
+  <div class="container-fluid">
+    <div class="col-md-5 col-xs-12 lft">
+      <div class="left">
+        <h2>Let's Build Something Together</h2>
+          <%= link_to "contact#contact", class: 'service-link one' do %>
+            <span>Request a Quote</span>
+          <% end %>
 
-      <div class="col-md-7 col-xs-12">
-        <div class="right">
-          <%=image_tag( 'partner-goo.png', alt: 'High Seas Design House, Orange Beach, Al - Google Partners' , class: 'img-responsive p-img xsbord') %>
-          <%=image_tag( 'partner-s.png', alt: 'High Seas Design House, Orange Beach, Al - Shopify Partners', class: 'img-responsive p-img' ) %>
-          <hr class="small">
-          <%=image_tag( 'partner-v.png', alt: 'High Seas Design House, Orange Beach, Al - Vend Partners', class: 'img-responsive p-img last xsbord' ) %>
-          <hr class="large">
-          <%=image_tag( 'partner-g.png', alt: 'High Seas Design House, Orange Beach, Al - Git Users', class: 'img-responsive p-img' ) %>
-          <hr class="small">
-          <%=image_tag( 'partner-b.png', alt: 'High Seas Design House, Orange Beach, Al - Bing Partners', class: 'img-responsive p-img xsbord' ) %>
-          <%=image_tag( 'partner-va.png', alt: 'High Seas Design House, Orange Beach, Al - Vantive Partners', class: 'img-responsive p-img last' ) %>
-        </div>
+          <%= mail_to "info@hsdesignhouse.com", "Email Us", encode: "hex", class: 'service-link two' do %>
+            <span>Send Your Resume</span>
+          <% end %>
       </div>
+    </div>
+
+    <div class="col-md-7 col-xs-12 rt">
+      <div class="right">
+        <%=image_tag( 'partner-goo.png', alt: 'High Seas Design House, Orange Beach, Al - Google Partners' , class: 'img-responsive p-img xsbord') %>
+        <%=image_tag( 'partner-s.png', alt: 'High Seas Design House, Orange Beach, Al - Shopify Partners', class: 'img-responsive p-img' ) %>
+        <hr class="small">
+        <%=image_tag( 'partner-v.png', alt: 'High Seas Design House, Orange Beach, Al - Vend Partners', class: 'img-responsive p-img last xsbord' ) %>
+        <hr class="large">
+        <%=image_tag( 'partner-g.png', alt: 'High Seas Design House, Orange Beach, Al - Git Users', class: 'img-responsive p-img' ) %>
+        <hr class="small">
+        <%=image_tag( 'partner-b.png', alt: 'High Seas Design House, Orange Beach, Al - Bing Partners', class: 'img-responsive p-img xsbord' ) %>
+        <%=image_tag( 'partner-va.png', alt: 'High Seas Design House, Orange Beach, Al - Vantive Partners', class: 'img-responsive p-img last' ) %>
+      </div>
+    </div>
   </div>
 </section>
 
