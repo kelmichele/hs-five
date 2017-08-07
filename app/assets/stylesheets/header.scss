@@ -2,18 +2,9 @@
 @import "mixins";
 
 
-header {
-  .main-menu {
-    position: relative;
-    text-align:center;
-  }
-  .navbar-default {
-    background-color: $white;
-    border: none;
-    margin-bottom:0;
-    border-radius:0;
-    position:relative;
-  }
+header { padding:0px 15px;
+  .main-menu {position: relative;text-align:center;}
+  .navbar-default {background-color: $white; border: none; margin-bottom:0; border-radius:0; position:relative;}
   .logo-header { padding-top:20px}
   .navbar-default .navbar-nav { float: right; padding-top:15px; padding-bottom: 15px;}
   .navbar-default .navbar-nav>li>a {
@@ -33,10 +24,7 @@ header {
   }
 
   /*Dropdown CSS*/
-  .navbar-nav>li>.dropdown-menu {
-    padding:12px 0;
-    display:none;
-  }
+  .navbar-nav>li>.dropdown-menu {padding:12px 0;display:none;}
   .has-child:hover >.dropdown{display:block;width:175px; }
 
   .navbar-nav>li:hover > ul.dropdown-menu{
@@ -48,23 +36,14 @@ header {
     animation: fadeInUp 400ms;
   }
 
-  .dropdown-menu>li {
-    margin-left:0;
-  }
-
-  .dropdown-menu>li>a {
-    color:$white;
-    padding:5px 20px;
-  }
-
+  .dropdown-menu>li {margin-left:0;}
+  .dropdown-menu>li>a {color:$white;padding:5px 20px;}
   .dropdown-menu>li>a:hover,
-  .dropdown-menu>li>a:focus{
-    background-color:transparent;
-  }
+  .dropdown-menu>li>a:focus{background-color:transparent;}
 
   @include bp(md) {
     .navbar-default:after,
-    .navbar-default .navbar-nav > li > a:before { display:none}
+    .navbar-default .navbar-nav > li > a:before { display:none; }
   }
 
   .megamenu-parent {
@@ -88,18 +67,13 @@ header {
   .megamenu-parent.menu-fade-up .has-child:hover >.dropdown{-webkit-animation:spMenuFadeInUp 400ms; animation:spMenuFadeInUp 400ms;}
 }
 
-.top-contact {
-  @include sec-default ();
-  padding-top:10px;
-  text-align: left;
-  font-weight:bold;}
-.tel-head { float: left; color: $b-gray; padding-left: 30px; font-size: 15px;font-family: $lato;
+.top-contact {@include sec-default (); padding:10px 15px 0 0; font-weight:bold;}
+.tel-head { float: left; color: $b-gray; font-size: 15px;font-family: $lato;
   &:hover {color: $teal;}
 }
 .email { float: right; color: $b-gray; padding-right:15px; font-size: 15px;font-family: $lato;
   &:hover {color: $teal; text-decoration: none;}
 }
-
 
 ul.social-links{ padding-left: 0;
   li { display: inline-block; margin-right: 5px;
@@ -114,15 +88,10 @@ ul.social-links{ padding-left: 0;
   }
 }
 
-/////////Optional Tablet Full Row Nav //////////////
-// @include bp(tb) {
-//     .logo-block {width:100%;}
-//     .logo-img{ @include center-block();}
-//     .mega-tab { @include sec-default (); text-align: center;}
-//     .megamenu-parent { float:none;
-//         li { margin: 0 12px;}
-//     }
-// }
+.logo-col, .con-col {display: inline-block; float: left; width: 40%; }
+.con-col {float: right; width:50%;}
+.ci-col, .soc-col {display: inline-block; float: left; width: 79%;}
+.soc-col {float: none; width: 20%;}
 .mobile-contact {display: none;}
 
 #offcanvas-toggler {
@@ -138,7 +107,6 @@ ul.social-links{ padding-left: 0;
     h4 {color:$white; line-height:2em; padding-top:10px; font-family: $lato; }
     h4:hover {color:$black; text-decoration:none; }
     // .m-phone { color: $dark;}
-
 }
 
 .offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white; background:$dark}
@@ -156,7 +124,7 @@ h3.module-title {color: $dark;}
 
 .close-offcanvas{position:absolute; top:15px; right:15px; z-index:1; color:#000; border:2px solid #eee; border-radius:100%; width:22px; height:22px; line-height:18px; text-align:center; font-size:12px}
 .close-offcanvas:hover{background:#000; color:#fff}
-.offcanvas-menu{width:280px; height:100%; background:#fff; color:rgba(255,255,255,0.5); position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll}
+.offcanvas-menu{width:280px; height:100%; background:#f9f9f9; border-left: 1px solid #dfdfdf; color:rgba(255,255,255,0.5); position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll}
 .offcanvas-menu .offcanvas-inner{padding:20px}
 .offcanvas-menu .offcanvas-inner .module{margin-top:20px}
 .offcanvas-menu .offcanvas-inner .module ul > li{border:none; margin-bottom:10px; }
@@ -177,13 +145,17 @@ h3.module-title {color: $dark;}
 .offcanvas .offcanvas-menu{opacity:1}
 .menu .nav-child.small{font-size:inherit}
 
+@include bp(dt) {
+  .top-contact {width:75%; float: right; text-align: center;}
+}
 
 @include bp(md) {
-  .logo-box {@include sec-default(); padding-bottom:15px;}
-  .top-contact {display: none;}
+  .logo-col {@include sec-default(); padding:0 10px 15px; }
+  .con-col {display: none;}
+  header {padding:0;}
   #offcanvas-toggler { display:block }
   .mobile-contact {display: block; text-align: center; padding-top:10px;
-    .tel-head, .email {@include center-block(); }
+    .tel-head, .email {@include center-block(); color: $dark;}
     .email {margin-bottom: 5px; margin-top: 5px;}
   }
 }

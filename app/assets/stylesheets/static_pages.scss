@@ -47,7 +47,7 @@
     padding: 60px 0px;
 
     .hsdh{width: 90%; @include center-block();}
-    .tm-vid {width: 85%; @include center-block();}
+    .tm-vid {width: 85%; @include center-block(); height: 315px;}
     .left-txt, .vid-blk {width: 90%; @include center-block(); text-align: center; margin-top:20px;}
 
     .intro {@include sec-default ();color: $dark;}
@@ -76,6 +76,7 @@
       transition: all .4s ease;}
     }
   }
+
   .hcontent-body {
     @include sec-default ();
     @include sec-bgimage ();
@@ -100,21 +101,6 @@
       font-family: $raleway; text-transform: uppercase;
       font-size: 45px;
     }
-    // @include bp(md) {
-    //   background-image: url(image_path('workspacebw-mob.jpg'));
-    //   background-attachment: scroll;
-    //   background-color: $b-gray;
-    //   .hcontent-inner {padding:10px;}
-    //   .title-head { padding: 25px; margin-bottom:15px;}
-    // }
-    // @include bp(sm) {
-    //   .title-head { padding: 25px 0; margin-bottom:15px;}
-    //    h2 { font-size: 25px; }
-    // }
-    // @include bp(xs) {
-    //   .col-md-4.col-xs-12 { padding: 0;}
-    //   .col-md-12.col-xs-12 { padding: 0;}
-    // }
   }
 
   .home-service {
@@ -281,17 +267,20 @@
     .homesec-video {
       .video-holder {background-position: bottom right;}
       .over-holder {background-size: 30%;
-        .welcome {padding-left: 14%;}
-        h1, h3 {text-shadow: 0px 1px 1px rgba($black, .8);}
+        .welcome {padding-left: 14%;
+          h1, h3 {text-shadow: 0px 1px 1px rgba($black, .8);}
+          h3 {font-weight: 500;}
+        }
       }
     }
 
     .border-slope {padding-top:50px;}
 
-    .home-slope { padding: 30px 0 40px;
-      .intro {padding: 0px;}
+    .home-slope {
+      padding: 20px 0 40px;
       h2 {font-size: 27px; }
       p {font-size: 16px;}
+      .tm-vid {width:85%; height:280px;}
     }
 
     .hcontent-body {
@@ -324,7 +313,8 @@
     }
     .border-slope {display: none;}
 
-    .home-slope { padding: 20px 0;
+    .home-slope {
+      padding: 10px 0 20px;
       h2 {font-size: 24px; }
       h3{font-size: 20px;}
       p {font-size: 15px;}
@@ -343,6 +333,105 @@
       .over-holder {background-size: 20%;
         .welcome {padding-left: 10%;}
       }
+    }
+  }
+
+  @include bp(ph) {
+    .homesec-video { height:50vh;
+      .over-holder { padding-top:30px; background-position: left bottom;
+        .welcome {padding: 20px 0 0px 40px;
+          h1, h1 span.sm {font-size: 30px; margin-top: 0;}
+          h3 {font-size: 24px;}
+        }
+      }
+    }
+
+    .home-slope {
+      .tm-vid {height: 235px; width:95%;}
+    }
+  }
+
+  @include bp(sm) {
+    .homesec-video { height:30vh;
+      .video-over {padding-top:30px;
+        .xsp{padding-right:0; padding-left: 10px;}
+      }
+      .over-holder { padding-top:30px; background-position: left center;
+        .welcome {padding: 0px 0 0 20px;
+          h1, h1 span.sm {font-size: 25px; margin-top: 0;}
+          h3 {font-size: 19px;}
+        }
+      }
+    }
+
+    .home-slope {
+      .hsdh{width:100%;}
+      .left-txt {margin-top: 0;}
+      h2 {font-size: 20px;}
+      h3 {font-size: 17px;}
+      .about-link { font-size: 16px; width:45%;}
+      .tm-vid {height:210px;}
+    }
+
+    .hcontent-body {
+      .xsp{padding: 0;}
+      h2 {font-size: 20px;}
+      .home-service {
+        .content {padding: 15px;
+          .title h2 {font-size: 18px;}
+          hr {margin: 10px 0;}
+        }
+        .service-link {width:50%;}
+      }
+    }
+
+    .partners {
+      .left .service-link {width: 75%; @include center-block(); margin-top: 10px;}
+      .p-img {width:32%; margin:0; padding: 5px 8px;}
+    }
+  }
+
+  @include bp(xs) {
+    .homesec-video { height:23vh;
+      .video-over {padding-top:20px;}
+      .over-holder {
+        .welcome {padding: 0px 0 0 20px;
+          h1, h1 span.sm {font-size: 22px; }
+          h3 {font-size: 17px;}
+        }
+      }
+    }
+
+    .home-slope {
+      h2 {font-size: 18px;}
+      h3 {font-size: 16px;}
+    }
+
+    .hcontent-body { padding:0;
+      h2 {font-size: 18px;}
+    }
+  }
+
+  @include bp(xx) {
+    .homesec-video {
+      .over-holder { padding-top: 5px;
+        .xxp {padding:0;}
+        .welcome {padding: 10px 0 0 20px;
+          h1, h1 span.sm {font-size: 20px; }
+        }
+      }
+    }
+
+    .home-slope {
+      h2 {font-size: 17px;}
+      h3 {font-size: 15px;}
+      .intro {margin-bottom: 15px;}
+      .tm-vid {width:100%; height: 190px;}
+    }
+
+    .hcontent-body { padding:0;
+      h2 {font-size: 18px;}
+
     }
   }
 
