@@ -436,27 +436,24 @@
 
     }
   }
-
 }
 
 .about {
+  .tm-vid {width: 99%; height: 350px;}
   p { font-family: $pro;}
 
-  .about-page1 {
-    @include sec-default ();
-    background-size:100%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-image: url(image_path('tech-header.jpg'));
+  .about-page1 {@include sec-default ();@include sec-bgimage();
+    background-position: bottom center; background-image: url(image_path('tech-header.jpg'));
 
+    .right {float: right;}
+    .left{width:70%;}
     h1 { font-weight: 800; font-family: $lato; font-size:50px; margin-bottom: 5px; color:$white; }
     h3 { font-weight: 600; font-family: $lato; font-size: 30px; margin-top: 0; color:$light-gray; padding-top:0; padding-bottom:10px;}
     p { font-style: italic; color: $white; font-size: 18px;}
 
     .inner {
-      @include sec-default ();
+      @include sec-default ();background-color: rgba( $black, .55);
       height:500px;
-      background-color: rgba( $black, .55);
       padding: 50px 30px 20px;
     }
 
@@ -469,9 +466,9 @@
       font-size: 30px;
       line-height: 1.2em;
       text-align: left;
-      margin-top: 35%;
+      margin-top: 32%;
       right: -20px;
-      width: 90%;
+      width: 70%;
       -webkit-transform-origin: top center;
       -moz-transform-origin: top center;
       -o-transform-origin: top center;
@@ -484,26 +481,20 @@
       transform: rotate(-15deg);
     }
 
-    @include bp(md) {
+    @include bp(tb) {
       background-position: top left;
-      margin-bottom:10px;
+      .inner { height: 420px; }
+      .left{width:100%; }
+      h3.quote { font-size: 25px;width: 90%; }
+    }
 
+    @include bp(md) {
+      margin-bottom:10px;
       .inner { height: 275px; padding:10px 10px 40px;}
       p {width: 70%; }
       h3 { padding-bottom:5px; font-size: 25px;}
-      h3.quote {
-        font-size: 20px;
-        padding-top:10px;
-        left: 0;
-        width: 90%;
-        opacity: 0.7;
-        margin-top: 0;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-        padding-bottom: 15px;
+      h3.quote { font-size: 20px; padding-top:10px; left: 0; width: 90%; opacity: 0.7; margin-top: 0; padding-bottom: 15px;
+        -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);
       }
       h1 { font-size: 40px}
     }
@@ -536,14 +527,20 @@
       p {color: $dark; font-size:17px;}
     }
 
+    @include bp(tb) {
+      .mobpad {padding:0;}
+    }
+
     @include bp(md) {
       padding-left:0px;
+      .mobpad{padding: 0 10px;}
       .inner {padding:20px;}
       .story-img { width: 50%;}
+      img.mobile-show {@include center-block(); width:50%;}
     }
 
     @include bp(sm) {
-      .story { padding-left:0px;padding-right:0px;}
+      img.mobile-show {@include center-block(); width:70%;}
     }
   }
 
@@ -631,93 +628,38 @@
 }
 
 .clients {
-  .client-sec1 {
-    @include sec-default ();
-    background-image: url(image_path('busy.jpg'));
-    @include sec-bgimage ();
-    background-position: center center;
-    background-attachment: fixed;
-
+  .client-sec1 { @include sec-default (); background-image: url(image_path('busy.jpg')); @include sec-bgimage (); background-position: center center; background-attachment: fixed;
     .inner {
       background-color: rgba($b-gray, 0.6);
       @include sec-default ();
       text-align: center;
       padding:80px 0px;
     }
+
+    .hdr {width:45%; @include center-block();}
   }
 
-  h1 {
-    color: $white;
-    font-family: $lato;
-    font-size: 40px;
-    line-height: 1.2em;
-    font-weight: 900;
-    padding-bottom:30px;
-  }
-  h3 {
-    color: $dark;
-    font-family: $lato;
-    font-size: 30px;
-    line-height: 1.1em;
-    padding-bottom:20px;
-    font-weight: 600;
-  }
-  @include bp(md) {
-    .client-sec1 {background-attachment: scroll;
-      .inner {padding:30px 0px;}
-    }
-    h1 { font-size:30px;}
-  }
+  h1 {color: $white; font-family: $lato; font-size: 40px; line-height: 1.2em; font-weight: 900; padding-bottom:30px;}
+  h3 { color: $dark; font-family: $lato; font-size: 30px; line-height: 1.1em; padding-bottom:20px; font-weight: 600;}
 
-  .intro-box {
-    @include sec-default ();
-    background-color: $white;
-    padding: 40px 0 ;
-    padding-bottom: 90px;
-    text-align: center;
+
+
+  .intro-box { @include sec-default (); background-color: $white; padding: 40px 0 60px; text-align: center;
+    .content {@include center-block(); width:70%;}
+
     h4 { color: $dark; line-height: 1.4em; font-size:17px; font-family: $lato; }
-    h4.plus { font-size:26px; font-weight: 800;  text-transform: uppercase; margin-top:20%;
+    h4.plus { font-size:26px; font-weight: 800; text-transform: uppercase; margin-top:20%;
       span { color: $teal; letter-spacing: 1px;}
-
-    @include bp(md) { margin-top:20px; padding-bottom: 10px;}
-    @include bp(sm) {font-size: 18px;}
     }
   }
 
-  .client-logos {
-    @include sec-default ();
-    padding-top:40px;
-  }
-  .logo-sec {
-    @include sec-default ();
-    border-left: 1px solid #dfdfdf;
-  }
-  .clientlogo{
-    padding:20px;
-    width: 32.5%;
-    display: inline-block;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
+  .client-logos {@include sec-default ();padding-top:40px;}
+  .logo-sec { @include sec-default (); border-left: 1px solid #dfdfdf;}
+  .clientlogo{padding:20px;width: 32.5%;display: inline-block;
+    filter: grayscale(100%);-webkit-filter: grayscale(100%);
+    -webkit-transition: all .4s ease;transition: all .4s ease;
 
-    &:hover {
-      filter: grayscale(0);
-      -webkit-filter: grayscale(0);
-    }
-  }
-
-  @include bp(md) {
-      .client-logos { padding-top:0px; }
-      .logo-sec { border-left:0;}
-      .clientlogo{
-        width: 45%;
-        filter: grayscale(0);
-        -webkit-filter: grayscale(0);
-      }
-  }
-  @include bp(sm) {
-    .clientlogo{ padding:10px; width: 49%;}
+    &:hover { filter: grayscale(0); -webkit-filter: grayscale(0);}
   }
 
   .portfolio2 {
@@ -761,6 +703,42 @@
 
       .no-padding-r.pleft-3 { padding-left:5px; padding-right:5px; }
     }
+  }
+
+  @include bp(tb) {
+    .client-sec1 {background-attachment: scroll;
+      .inner {padding:15px 0px;}
+      .hdr {width:100%;}
+    }
+    h1 { font-size:30px;}
+
+    .intro-box { padding: 20px 0 35px;
+      .content {width:85%;}
+    }
+    .client-logos {padding-top: 15px;}
+  }
+
+  @include bp(md) {
+    .client-sec1 {
+      .inner {padding: 0px;}
+    }
+    h1 {font-size: 24px;}
+    .intro-box {
+      h4.plus{margin-top: 10px;}
+      h3 {padding-bottom: 10px;}
+    }
+    .client-logos { padding-top:0px; }
+    .logo-sec { border-left:0;}
+    .clientlogo{ width: 45%; filter: grayscale(0); -webkit-filter: grayscale(0);}
+  }
+
+  @include bp(sm) {
+    h1{font-size: 23px;}
+    .intro-box .content {width:98%;
+      h3 {font-size: 20px;}
+      h4.plus {font-size: 20px;}
+    }
+    .clientlogo{ width: 49%; padding: 10px;}
   }
 }
 
@@ -808,78 +786,35 @@
     p, h2,h3,h4,h5 {font-family:$pro}
     ol.carousel-indicators li { color: $dark; background-color: $dark}
 
-    .e-header {
-      @include sec-default ();
-      background-image: url(image_path('ec-header.jpg'));
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center left;
-      background-attachment: fixed;
-      padding-top:50px;
-      padding-left:30px;
-      height:410px;
-      overflow:hidden;
-      h1 {
-          font-size: 60px;
-          color: $white;
-          font-family: $lato;
-          font-weight: 900;
-          margin-bottom:0;
-          text-transform: uppercase;
-      }
-      @include bp(md) {
-        background-attachment: scroll;
-        padding:20px 10px;
-        height:auto;
+    .e-header { @include sec-default (); background-image: url(image_path('ec-header.jpg')); background-size: 100%; background-repeat: no-repeat; background-position: center left; background-attachment: fixed; padding-top:50px; padding-left:30px; height:410px; overflow:hidden;
+      h1 { font-size: 60px; color: $white; font-family: $lato; font-weight: 900; margin-bottom:0; text-transform: uppercase;}
 
-        h1 { font-size: 40px; padding-bottom:15px;}
+      @include bp(tb) {
+        background-attachment: scroll;padding:40px 10px;height:auto;
+        h1 { font-size: 35px; padding-bottom:15px;}
       }
+
+      @include bp(md) {padding:20px 10px;}
+
       @include bp(sm) {
         padding-top:10px;
         h1 { font-size: 25px; padding-bottom:0px;}
       }
     }
 
-    .ecommerce-page-2 {
-      @include sec-default ();
-      @include slopey-layout-r ();
-      padding-top:40px;
-      overflow: hidden;
-
-      .border-slope {
-        width: 110%;
-        position: absolute;
-        margin: 0;
-        right:-10px;
-        top:68%;
-        padding-top:45px;
-        background: darken($white, 5%);
-        -webkit-transform-origin: left center;
-        -moz-transform-origin: left center;
-        -o-transform-origin: left center;
-        -ms-transform-origin: left center;
-        transform-origin: left center;
-        -webkit-transform: rotate(-4deg);
-        -moz-transform: rotate(-4deg);
-        -o-transform: rotate(-4deg);
-        -ms-transform: rotate(-4deg);
-        transform: rotate(-4deg);
-        box-shadow: 0px -1px 1px rgba(0,0,0,0.4);
+    .ecommerce-page-2 { @include sec-default ();@include slopey-layout-r ();padding-top:40px;overflow: hidden;
+      .border-slope { width: 110%; position: absolute; margin: 0; right:-10px; top:65%; padding-top:45px; background: darken($white, 5%); box-shadow: 0px -1px 1px rgba(0,0,0,0.4);
+        -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; -ms-transform-origin: left center; transform-origin: left center;
+        -webkit-transform: rotate(-4deg); -moz-transform: rotate(-4deg); -o-transform: rotate(-4deg); -ms-transform: rotate(-4deg); transform: rotate(-4deg);
         overflow: hidden;
 
-        .slope {
-          overflow-x: hidden;
-          margin:0 auto;
-          -webkit-transform: rotate(4deg);
-          -moz-transform: rotate(4deg);
-          -o-transform: rotate(4deg);
-          -ms-transform: rotate(4deg);
-          transform: rotate(4deg);
+        .slope {overflow-x: hidden; margin:0 auto;
+          -webkit-transform: rotate(4deg); -moz-transform: rotate(4deg); -o-transform: rotate(4deg); -ms-transform: rotate(4deg); transform: rotate(4deg);
           padding:40px 0px 20px 30px;
         }
       }
 
-      @include bp(md) {
+      @include bp(tb) {
         .border-slope { display: none;}
       }
     }
@@ -890,9 +825,10 @@
       h4 {color: $dark; line-height: 1.4em;}
 
         .content {
-          @include sec-default ();
+          // @include sec-default ();
+          width:84%; @include center-block();
           background-color: $white;
-          padding:50px 10px 80px ;
+          padding:30px 10px 80px ;
         }
 
         .ecol-1 { @include sec-default (); padding-right:15px;}
@@ -925,6 +861,12 @@
         &.left { margin-left:-25%; margin-top:-5%; z-index: 80; width: 90%;}
         &.right { margin-top:-10%; float: right; margin-right: -5%; z-index: 70;}
         &.aside { margin-top:20px; }
+      }
+
+      @include bp(tb) {
+       .inside-ecom2 {
+          .content {width:90%;}
+        }
       }
 
       @include bp(md) {
@@ -1059,15 +1001,8 @@
 
 .design {
   .webdesign {
-    @include sec-default ();
-    background-color:$white;
-    background-image: url(image_path('monitor.png'));
-    background-size: 55%;
-    background-position: left top;
-    background-repeat: no-repeat;
-    padding-top:70px;
-    padding-bottom:300px;
-
+    @include sec-default (); background-color:$white; background-image: url(image_path('monitor.png')); background-size: 55%; background-position: left top; background-repeat: no-repeat;
+    padding-top:70px; padding-bottom:300px;
 
     h1 { font-size:75px; line-height: 1em; font-family: $roboto; font-weight: 900; color:$teal; padding:20px 0 30px 35px; text-transform: uppercase; }
     h1:before { content: '<'; font-size: 135px; font-weight: normal; color: $teal; position: absolute; left:-3%;}
@@ -1081,67 +1016,66 @@
     h3 { color: $dark; }
     .focus { font-size:40px; line-height: 1em; font-family: $raleway; font-weight: 900; color:$light-gray; text-transform: uppercase; display: inline-block; margin-right:10%; margin-bottom:15px;}
 
-    @include bp(md) {
-      background-size: 42%;
-      padding-top:30px;
-      padding-bottom:60px;
-      padding-right:10px;
-
-      h1 { font-size:50px;float: right; padding:0; }
+    @include bp(tb) {
+      padding-top:30px; padding-bottom:80px; background-size: 50%; text-align: center;
+      .nmtb {margin-left: 45%;}
+      h1 { font-size:50px;  }
       h1:before, h1:after{ position:relative; font-size: 65px;}
       h1:before { left:0;}
+      h1:after { right:-5px;}
+      .focus { font-size:30px; margin-right:5%;}
+    }
+
+    @include bp(md) {
+      background-size: 42%; padding-bottom:60px; padding-right:10px;
+      .nmtb {margin-left: 0;}
+      h1 {float: right; padding:0; }
       h1:after { right:1px;}
       .focus { font-size:18px; float:right; margin-right:5px; margin-left:5px; margin-bottom:5px;}
     }
 
-    @include bp(sm) {
-      background-position: bottom left;
-      background-size: 30%;
-      padding-top:15px;
-      padding-bottom:50px;
-      text-align: center;
+    @include bp(ph) {background-position: bottom left;background-size: 23%;
+      padding-top:5px; padding-bottom:50px; text-align: center;
       h1 { font-size:30px;float: none; }
       h1:before, h1:after{ position:relative; font-size: 35px;}
-      .focus { font-size:15px; float:none; margin-right:5px; margin-left:5px; margin-bottom:5px;}
+      .focus { font-size:15px; float:none; }
     }
   }
 
-    p { color: $dark; font-family: $pro; font-size:16px; }
+  p { color: $dark; font-family: $pro; font-size:16px; }
 
-    .webdesign-body {
-      @include sec-default();
-      background-color:darken($off-white, 10%);
+  .webdesign-body {@include sec-default();background-color:darken($off-white, 10%);
 
-      svg.half-circle { width: 100%; margin:0; margin-top:-12%; }
-      #bigHalfCircle path {
-        fill: darken($off-white, 10%);
-        stroke: darken($off-white, 11%);
+    svg.half-circle { width: 100%; margin:0; margin-top:-12%; }
+    #bigHalfCircle path {
+      fill: darken($off-white, 10%);
+      stroke: darken($off-white, 11%);
 
-        @include bp(md) {display: none; }
-      }
-
-      .wb-1 {
-        @include sec-default();
-        padding:55px 30px 80px 40px;
-      }
-      h3 { color: $teal; font-weight: 800; letter-spacing: 1px; font-size: 33px; line-height: 1.2em; padding-bottom:10px; }
-
-      .mockup {
-        width: 80%;
-        @include center-block ();
-      }
-
-      @include bp(md) {
-        .mockup { width: 80%; padding-top:25px;}
-        .wb-1 { padding:0px 10px 40px 10px; }
-        h3 { font-size: 27px;text-align: center; }
-      }
-
-      @include bp(sm) {
-        .wb-1 { padding:20px 0; }
-        h3 { font-size: 22px; text-shadow:none;}
-      }
+      @include bp(tb) {display: none; }
     }
+
+    .wb-1 {
+      @include sec-default(); padding:55px 30px 80px 40px;
+    }
+    h3 { color: $teal; font-weight: 800; letter-spacing: 1px; font-size: 33px; line-height: 1.2em; padding-bottom:10px; }
+
+    .mockup { width: 80%; @include center-block ();}
+
+    @include bp(tb) {
+      .mockup { width: 80%; padding-top:25px;}
+      .wb-1 { padding:20px 10px 0px 0px; }
+      h3 { font-size: 27px;text-align: center; }
+    }
+
+    @include bp(md) {
+      .wb-1 { padding:0px 10px 40px 10px; }
+    }
+
+    @include bp(sm) {
+      .wb-1 { padding:20px 0; }
+      h3 { font-size: 22px; text-shadow:none;}
+    }
+  }
 
     svg.big-triangle { width: 100%; margin:0;}
     #bigTriangleColor path {
@@ -1150,17 +1084,14 @@
       stroke-width: 1;
     }
 
-    .post-wb {
-      @include sec-default ();
-      background-color: $white;}
+    .post-wb {@include sec-default ();background-color: $white;}
 
-      .inner {  @include sec-default (); padding: 80px 0 120px ;
-          height:560px;
+    .inner { @include sec-default (); padding: 80px 0 120px; height:560px;
 
-      p.up { font-weight: bold; text-transform: uppercase; margin-bottom: 3px;}
-      h4 { color: $teal; font-weight: 800; font-size: 18px; line-height: 1.1em; margin-bottom:5px; font-family:$lato; text-transform: uppercase;}
+    p.up { font-weight: bold; text-transform: uppercase; margin-bottom: 3px;}
+    h4 { color: $teal; font-weight: 800; font-size: 18px; line-height: 1.1em; margin-bottom:5px; font-family:$lato; text-transform: uppercase;}
 
-      .last p {margin-bottom:0;}
+    .last p {margin-bottom:0;}
     }
 
     a.left.carousel-control, a.right.carousel-control { color: rgba($white, 1);}
@@ -1177,6 +1108,12 @@
       margin-top:25px;
     }
     .bot-box{ @include sec-default (); padding: 15px 40px 15px 30px; }
+
+    @include bp(tb) {
+      .inner {  padding: 50px 0; height:auto;}
+      .bot-box{ padding: 0px 20px 15px 10px; }
+      .service-link {text-align:center}
+    }
 
     @include bp(md) {
       .post-wb { .inner {  padding: 50px 0; height:auto;} }
@@ -1226,180 +1163,186 @@
   .sem-page {
     p { font-size: 17px; font-family: $roboto}
 
-    .sem-sec1 {
-      @include sec-default();
-      @include slopey-layout-r ();
-      background-color: $white;
-      background-image: url(image_path('dm-header.jpg'));
-      background-repeat:no-repeat;
-      background-attachment: fixed;
-      background-size: 100%;
-      background-position: center left;
+    .sem-sec1 { @include sec-default(); @include slopey-layout-r (); background-color: $white; background-image: url(image_path('dm-header.jpg')); background-repeat:no-repeat; background-attachment: fixed; background-size: 100%; background-position: center left;
       overflow: hidden;
       height:480px;
 
-      .bg-over {
-        @include sec-default();
-        background-color: rgba($b-gray, 0.3);
+      .bg-over { @include sec-default();background-color: rgba($b-gray, 0.3);
         padding:40px 0 160px 0px;
         height:480px;
       }
 
-      .title-box { position: absolute; z-index: 1;}
+      .title-box {
+        // position: absolute; z-index: 1;
+        width:40%;
+      }
       h1 { font-size: 50px; font-family: $poppins; font-weight: 800; color: $white; text-transform: uppercase; }
       h2 { font-size: 28px; font-family: $poppins; text-transform: uppercase; color: $white; line-height: 1.3em;}
       p{color: $white; font-weight: bold;}
 
 
       .border-slope {
-            width: 110%;
-            position: absolute;
-            right:-15px;
-            margin: 0;
-            top:77%;
-            padding-top:40px;
-            background-color: lighten($light-gray, 5%);
-            -webkit-transform-origin: left center;
-            -moz-transform-origin: left center;
-            -o-transform-origin: left center;
-            -ms-transform-origin: left center;
-            transform-origin: left center;
-            -webkit-transform: rotate(-4deg);
-            -moz-transform: rotate(-4deg);
-            -o-transform: rotate(-4deg);
-            -ms-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-            box-shadow: 0px -1px 1px rgba(0,0,0,0.4);
-            overflow: hidden;
+        width: 110%;
+        position: absolute;
+        right:-15px;
+        margin: 0;
+        top:77%;
+        padding-top:40px;
+        background-color: lighten($light-gray, 5%);
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        -ms-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: rotate(-4deg);
+        -moz-transform: rotate(-4deg);
+        -o-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+        box-shadow: 0px -1px 1px rgba(0,0,0,0.4);
+        overflow: hidden;
 
-            .slope {
-              overflow: hidden;
-              margin:0 auto;
-              -webkit-transform: rotate(4deg);
-              -moz-transform: rotate(4deg);
-              -o-transform: rotate(4deg);
-              -ms-transform: rotate(4deg);
-              transform: rotate(4deg);
-              padding:40px 0px 50px 30px;
-            }
-          }
+        .slope {
+          overflow: hidden;
+          margin:0 auto;
+          -webkit-transform: rotate(4deg);
+          -moz-transform: rotate(4deg);
+          -o-transform: rotate(4deg);
+          -ms-transform: rotate(4deg);
+          transform: rotate(4deg);
+          padding:40px 0px 50px 30px;
         }
+      }
+    }
+
+    @include bp(tb) {
+      .sem-sec1 {background-attachment: scroll;height:300px;
+        h1, h2, h3 {text-shadow: 0px 1px 1px $black;}
+      }
+      .title-box { width: 50%;}
+    }
+
+    @include bp(md) {
+      .sem-sec1 {
+        background-position: top left;
+        height:250px;
+        h1 { font-size: 40px; padding-top:0;}
+        h2 { font-size: 20px;}
+        p {font-size:15px;}
+        .bg-over {padding:20px 0 40px;height:250px;}
+      }
+    }
+
+    @include bp(pl) {
+      .sem-sec1 {height:auto;
+        h1 { font-size: 30px; }
+        h2{margin-top: 5px;}
+        .bg-over {height:auto; padding:20px 0;}
+        .title-box { width: 80%;}
+      }
+    }
+
+    @include bp(mb) {
+      .sem-sec1 {
+        .title-box { width: 100%;}
+      }
+    }
+
+    @include bp(xx) {
+      .sem-sec1 {
+        .bg-over {padding: 5px 0 0;}
+        h1 {font-size: 22px;}
+        h2 {font-size: 18px;}
+      }
+    }
+
+
+    .sem-wrap {
+      .light-bg { @include sec-default (); background-color: lighten($light-gray, 5%); padding:30px 0px; text-align: center;
+        p { color: $gray; font-size: 18px; font-style: italic; margin-bottom:30px;}
+        h3 { color: $dark; font-weight: 800; padding-bottom: 5px; font-size: 21px; }
+      }
+
+      .content {width:70%; @include center-block();}
+
+      .campaigns {
+        width: 100%;padding: 35px 0 0;
+        .lcontent, .rcontent {display: inline-block;width: 50%; float: left;}
+
+        .bp-img { width: 40%; display: inline-block; padding:0 15px; }
+        .google-badge { width: 50%; display: inline-block; float: right;}
+        .sem-serv {@include sec-default(); position: relative; background-color: $teal; padding: 20px;
+          h4 {margin-bottom:3px;}
+          p {color: $white; margin-bottom:25px;}
+
+          i.sem-con {height: 40px;content: url(image_path('lb.png')); display: inline-block; float: left; padding-top:3px; padding-right:7px;}
+        }
+      }
+
+      .intro{ @include sec-default (); padding:10px 25px 35px 25px;
+        .title{ font-size:35px; margin-top:15px; font-weight:800; position:relative; color: $b-gray;font-family: $lato;}
+        .title:after{content:''; width:3px; height:85px; background:#dad9e0; position:absolute; left:17px; top:23px; z-index:-1;}
+        p { padding-left:30px; color: $dark; font-family: $lato;}
+      }
+      h4 { color: $dark; padding-bottom: 2px;font-family: $lato; }
+      p{font-family: $lato;}
+
+      @include bp(tb) {
+        .light-bg {padding: 20px 0;}
+        .content {width: 90%;}
+
+        .campaigns {
+          .container-fluid.no-padding-r {padding:0;}
+          .lcontent, .rcontent { @include sec-default();}
+          .lcontent {margin-bottom: 30px; padding: 0 20px;}
+          .bp-img {margin-left: 15%; width:27%;}
+        }
+      }
 
       @include bp(md) {
-        .sem-sec1 {
-          background-attachment: scroll;
-          background-position: top left;
-          height:200px;
-          margin-bottom: 15px;
-          h1 { font-size: 40px; padding-top:0;}
-          h2 { font-size: 20px;}
-          p {font-size:15px;}
-
-          .bg-over {
-            padding:20px 0 40px;
-            height:200px;}
-        }
-        .title-box { width: 50%;}
-      }
-      @include bp(sm) {
-        .sem-sec1 {
-          .bg-over {padding:20px 0 30px; height: 210px;}
-            h1 { font-size: 30px; }
-        }
-        .title-box {width: 100%;}
-      }
-      @media only screen and (max-width: 570px) {
-        .sem-sec1 {
-          .bg-over {height:270px;}
-        }
-      }
-      @include bp(xs) {
-        .sem-sec1 {
-          .bg-over {height:175px;}
-        }
-      }
-      .sem-wrap {
-        .light-bg { @include sec-default ();
-          background-color: lighten($light-gray, 5%);
-          padding:30px 0px;
-          text-align: center;
-          p { color: $gray; font-size: 18px; font-style: italic; margin-bottom:30px;}
-          h3 { color: $dark; font-weight: 800; padding-bottom: 5px; font-size: 21px; }
+        .light-bg { padding: 30px 15px 0px;
+          p {padding-left:0px;}
         }
 
         .campaigns {
-          width: 100%;
-          padding: 35px 0 0;
-
-          .bp-img { width: 40%; display: inline-block; padding:0 15px; }
-          .google-badge { width: 50%; display: inline-block; float: right;
-
-            @include bp(md) {
-              float: none;
-              display: block;
-              @include center-block ();
-            }
-          }
-
-          .sem-serv {
-            @include sec-default();
-            position: relative;
-            background-color: $teal;
-            padding: 20px;
-            h4 {margin-bottom:3px;}
-            p {color: $white; margin-bottom:25px;}
-
-            i.sem-con {
-              height: 40px;
-              content: url(image_path('lb.png'));
-              display: inline-block;
-              float: left;
-              padding-top:3px;
-              padding-right:7px;
-            }
-          }
+          .bp-img { width:35%; }
         }
+        .intro {padding-bottom: 10px;}
+        h3 {padding-top:0; margin-top:0;}
+      }
 
-        .intro{ @include sec-default (); padding:10px 25px 35px 25px;
-          .title{ font-size:35px; margin-top:15px; font-weight:800; position:relative; color: $b-gray;font-family: $lato;}
-          .title:after{content:''; width:3px; height:85px; background:#dad9e0; position:absolute; left:17px; top:23px; z-index:-1;}
-          p { padding-left:30px; color: $dark; font-family: $lato;}
+      @include bp(pl) {
+        .light-bg { padding: 20px 0px 0px;
+          h3 {font-size: 19px;}
+          p{margin-bottom: 0; font-size: 15px;}
         }
-        h4 { color: $dark; padding-bottom: 2px;font-family: $lato; }
-        p{font-family: $lato;}
+        .content {border-bottom: 1px solid #dfdfdf;padding-bottom:20px;}
+        .campaigns {padding-top:0;}
+      }
 
-          @include bp(md) {
-            padding-top:10px;
-
-            .light-bg { padding: 30px 15px 0px;
-              p {padding-left:0px;}
-            }
-
-            .campaigns { padding-top:10px; padding-bottom:20px;
-              .no-padding-r {padding-right: 10px;}
-              .sem-serv p{color: $gray; font-weight: bold;}
-              .bp-img { width:50%; display: block; padding:5px; @include center-block ();}
-            }
-            .intro {padding-bottom: 10px;}
-            h3 {padding-top:0; margin-top:0;}
-          }
-
-          @include bp(sm) {
-            .light-bg { padding-top:0; }
-
-            .intro{
-              .title{ font-size:30px;}
-              p {padding-left:10px;}
-            }
-
-            .campaigns {
-              .bp-img { width:70%; display: block; padding:5px; @include center-block ();}
-              .sem-serv { padding: 20px 0 20px 0px;
-                p {margin-bottom: 10px}}
+      @include bp(mb) {
+        .campaigns {
+          .intro {padding:0;
+            .title {font-size: 25px; text-align: center; color: $teal;
+              &:after {display: none;}
             }
           }
+          p {font-size: 15px; }
+
+        }
+      }
+
+      @include bp(sm) {
+        .campaigns {
+          p{padding-left: 0;}
+          .google-badge {width: auto; float: left; display: block; }
+          .bp-img {width: 75%;@include center-block(); margin-top: 15px;}
+
+          .sem-serv {text-align: center;}
+        }
       }
     }
+  }
 }
 
 .contact {
