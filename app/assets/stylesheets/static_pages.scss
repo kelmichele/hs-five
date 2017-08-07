@@ -9,7 +9,7 @@
 
 
 .home {
-  .homesec-video { @include sec-default (); background-color: #f7f7f7; overflow: hidden; position: relative; height: 38vh;
+  .homesec-video { @include sec-default (); background-color: #f7f7f7; overflow: hidden; position: relative; height: 80vh;
     .video-over, .video-holder,
     .video-holder .video-frame {@include sec-default (); position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
     .video-holder {@include sec-bgimage ();overflow: hidden;}
@@ -205,13 +205,14 @@
   }
 
   @include bp(tb) {
-    .homesec-video {
+    .homesec-video { height:40vh;
       .video-holder {
         background-image: url(image_path('mobile-bg2.png'));
         .video-frame{display: none;}
       }
 
-      .over-holder { padding: 10px 0;
+      .over-holder { padding: 10px 0; background-size: 23%;
+        .xxp {margin-left: 14%;}
         .welcome {
           padding: 40px 0;
           h1, h1 .sm { font-size: 40px; line-height: 1.1em; letter-spacing: 1px;}
@@ -266,8 +267,9 @@
   @include bp(md) {
     .homesec-video {
       .video-holder {background-position: bottom right;}
-      .over-holder {background-size: 30%;
-        .welcome {padding-left: 14%;
+      .over-holder {
+        .xxp {margin-left: 0;}
+        .welcome { padding-left: 14%;
           h1, h3 {text-shadow: 0px 1px 1px rgba($black, .8);}
           h3 {font-weight: 500;}
         }
