@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'sem' => 'static_pages#sem'
   get 'squad_goals' => 'static_pages#team', as: 'squad_goals'
   get 'contact' => 'static_pages#contact'
-  get 'hash' => 'static_pages#hash'
+  get 'photo-gallery' => 'static_pages#photo-gallery'
 
    get '/fb', to: 'links#fb'
    get '/insta', to: 'links#insta'

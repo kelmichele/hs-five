@@ -15,7 +15,8 @@
 		<![endif]-->
 
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<% unless current_page?(photo_gallery_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
+
 
 		  <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -31,5 +32,9 @@
 		<%= render 'layouts/header' %>
 			<%= yield %>
 		<%= render 'layouts/footer' %>
+		<% if current_page?(photo_gallery_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
 	</body>
 </html>
+
+
+

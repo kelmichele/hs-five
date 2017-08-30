@@ -1,0 +1,15 @@
+
+
+
+<div class="photography">
+  <div class="container">
+    <% @photos = (1..26) %>
+
+    <% tag = 0 %>
+    <% @photos.each do |photo| %>
+      <% tag +=1 %>
+      <% link = "hsdh-gallery/gallery-img"+"#{tag}"+".jpg" %>
+      <%= link_to(image_tag("#{link}", class: 'img-responsive gall', alt: 'High Seas Design House - photography portfolio'), image_path("#{link}", class: 'full-size'), data: { lightbox: "example-set", title: "High Seas Design House Image Gallery"}) %>
+    <% end %>
+  </div>
+</div>
