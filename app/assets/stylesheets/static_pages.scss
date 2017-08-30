@@ -1525,5 +1525,7 @@
 
 .photo-gallery {
   .photography {@include sec-default(); padding: 60px 0;}
-  .gall { display: inline-block; float: none; padding:5px; max-width: 30%; margin:auto;}
+  .gall { display: inline-block; float: none; padding:5px; max-width: 33%; margin:auto;
+    &.vert {height: 465px; width: auto;}
+  }
 }
