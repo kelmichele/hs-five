@@ -19,6 +19,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 
+gem 'will_paginate', '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 gem 'lightbox2-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

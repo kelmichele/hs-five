@@ -15,7 +15,7 @@
 		<![endif]-->
 
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<% unless current_page?(photo_gallery_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
+		<% unless current_page?(photos_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
 
 
 		  <script>
@@ -32,7 +32,7 @@
 		<%= render 'layouts/header' %>
 			<%= yield %>
 		<%= render 'layouts/footer' %>
-		<% if current_page?(photo_gallery_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
+		<% if current_page?(photos_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
 	</body>
 </html>
 

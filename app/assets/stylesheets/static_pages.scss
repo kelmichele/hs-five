@@ -131,22 +131,6 @@
     p {font-family: $pro; color: $gray; font-size:16px;
       &.visible {padding:0 10px 10px; margin-bottom: 10px;}
     }
-
-    // @include bp(md) {
-    //   .overlay { display: none;}
-    //   .content { height: 300px;}
-    //   .hs-icon {
-    //     @include center-block ();
-    //     width: 75px;
-    //     height:75px;
-    //     padding-bottom: 10px;
-    //   }
-    //   p.visible {padding:0px; margin-bottom: 5px; }
-    // }
-    // @include bp(sm) {
-    //   padding:0;
-    //   .content { height:auto; padding: 20px;}
-    // }
   }
 
   .partners{ @include sec-default (); background-color: $white; background-image: url(image_path('pattern10.png')); background-repeat: repeat; background-position: top left;
@@ -173,24 +157,6 @@
       &.last {border-right: 0;}
     }
     hr.small {display: none;}
-
-    // @include bp(md) {
-    //   .service-link { float: left; display: inline-block; width: 40%; margin-left:20px;
-    //       &.one {margin-right:15px;}
-    //   }
-    // }
-
-    // @include bp(sm) {
-    //   .service-link { display: block; width: 90%; @include center-block ();}
-    //   .p-img { width: 49%; border:0;
-    //     &.xsbord{border-right:1px solid #dfdfdf;}
-    //   }
-    //   hr.large {display: none;}
-    //   hr.small {display: block;}
-    // }
-    // @include bp(xs) {
-    //   .service-link { display: block; float: left;}
-    // }
   }
 
   @include bp(dt) {
@@ -439,250 +405,195 @@
 }
 
 .about {
-  .tm-vid {width: 99%; height: 350px;}
   p { font-family: $pro;}
-
-  .about-page1 {@include sec-default ();@include sec-bgimage();
-    background-position: bottom center; background-image: url(image_path('tech-header.jpg'));
-
-    .right {float: right;}
-    .left{width:70%;}
-    h1 { font-weight: 800; font-family: $lato; font-size:50px; margin-bottom: 5px; color:$white; }
-    h3 { font-weight: 600; font-family: $lato; font-size: 30px; margin-top: 0; color:$light-gray; padding-top:0; padding-bottom:10px;}
-    p { font-style: italic; color: $white; font-size: 18px;}
-
-    .inner {
-      @include sec-default ();background-color: rgba( $black, .55);
-      height:500px;
-      padding: 50px 30px 20px;
-    }
-
-    h3.quote {
-      font-style: italic;
-      color: $white;
-      position: absolute;
-      z-index: 9;
-      opacity: 0.7;
-      font-size: 30px;
-      line-height: 1.2em;
-      text-align: left;
-      margin-top: 32%;
-      right: -10px;
-      width: 70%;
-      -webkit-transform-origin: top center;
-      -moz-transform-origin: top center;
-      -o-transform-origin: top center;
-      -ms-transform-origin: top center;
-      transform-origin: top center;
-      -webkit-transform: rotate(-15deg);
-      -moz-transform: rotate(-15deg);
-      -o-transform: rotate(-15deg);
-      -ms-transform: rotate(-15deg);
-      transform: rotate(-15deg);
-    }
-
-    @include bp(tb) {
-      background-position: top left;
-      .inner { height: 420px; }
-      .left{width:100%; }
-      h3.quote { font-size: 25px;width: 90%; }
-    }
-
-    @include bp(md) {
-      margin-bottom:10px;
-      .inner { height: 275px; padding:10px 10px 40px;}
-      p {width: 70%; }
-      h3 { padding-bottom:5px; font-size: 25px;}
-      h3.quote { font-size: 20px; padding-top:10px; left: 0; width: 90%; opacity: 0.7; margin-top: 0; padding-bottom: 15px;
-        -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);
-      }
-      h1 { font-size: 40px}
-    }
-
-    @include bp(sm) {
-      .inner {padding:0;}
-      h1 { font-size: 30px;}
-      h3 { font-size: 20px;}
-      p { width:100%;}
-      h3.quote { width: 100%;}
-    }
-
-    @include bp(xs) {
-      .inner { height: 300px; }
-      h3 { font-size: 17px;}
-    }
-  }
-
-  .about-page2 {
-    @include sec-default ();
-    background-color: $white;
-
-    .inner {
-      @include sec-default ();
-      padding: 80px 0 80px 45px;
-    }
-
-    .story {
-      @include sec-default ();
-      p {color: $dark; font-size:17px;}
-    }
-
-    @include bp(tb) {
-      .mobpad {padding:0;}
-    }
-
-    @include bp(md) {
-      padding-left:0px;
-      .mobpad{padding: 0 10px;}
-      .inner {padding:20px;}
-      .story-img { width: 50%;}
-      img.mobile-show {@include center-block(); width:50%;}
-    }
-
-    @include bp(sm) {
-      img.mobile-show {@include center-block(); width:70%;}
-    }
-  }
-
-  .about-page3 {
-    @include sec-default ();
-    background-color: $light-gray;
-    background-size: 58.35%;
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-image: url(image_path('startup6-bw.jpg'));
-
-    .left {
-      @include sec-default ();
-      padding:40px 60px 30px;
-      background-color: $light-gray;
-
-      h4 { font-weight: 900; font-family: $lato; font-size: 21px; line-height: 1.3em; color:$dark; padding-bottom:20px;}
-      p { color: $dark;}
-    }
-
-    .right {
-      @include sec-default ();
-      background-color: rgba( $off-white, .8);
-    }
-
-    @include bp(md) {
-      background-size: 100%;
-      background-position: center center;
-      .left {padding:40px;}
-      .about-hold { display: none;}
-    }
-
-    @include bp(md) {
-      background-position: bottom center;
-    }
-  }
-
-  .about-service {
-    @include sec-default ();
-    @include sec-bgimage ();
-
-    .content { @include sec-default (); background: rgba($teal, 0.6); height:130px; padding:20px 25px; }
-    .title { @include sec-default (); padding-top: 20px; text-align: center;}
-    &:hover .content {
-      background: rgba($black, 0.8);
-      -webkit-transition: all .25s linear;
-      transition: all .25s linear;}
-    &:hover .overlay {
-      opacity: 1;
-      -webkit-transition: all .25s linear;
-      transition: all .25s linear;
-      transform: translateY(15px) ;
-      -ms-transform: translateY(15px) ;
-      -webkit-transform: translateY(15px) ;
-      position: relative;}
-
-    h3 {
-      font-weight: 800; color: $white;
-      line-height: 1.2em;
-      font-family: $raleway; text-transform: uppercase;
-    }
-
-      &.website {
-        &:hover .content { background: rgba($b-gray, 0.9)}
-      }
-      &.ecommerce {
-        &:hover .content { background: rgba($silver, 0.9)}
-      }
-
-      &.dmarket {
-        &:hover .content { background: rgba($b-gray, 0.9)}
-      }
-
-      @include bp(md) {
-        width: 33.2%;
-        &.dmarket, &.website {.content { background: rgba($silver, 0.6)}}
-        .title { padding-top:0;}
-      }
-
-      @include bp(sm) {
-        width: 100%;
-      }
-  }
-
-
-  .pg-bg {
-    @include sec-default(); position: relative;z-index: 0; height:1000px; background-color: #f7f7f7;
-    &:before{@include before(); @include sec-bgimage(); background-image: url(image_path('ocean-dark.jpg'));}
-  }
-
   .ab-hd { @include sec-default();
-    color: white; padding: 60px 60px 100px;
-    @include sec-bgimage(); background-image: url(image_path('ss-1.jpg'));background-position: center center;
+    color: white; height:350px; padding:80px 60px;
+    @include sec-bgimage(); background-image: url(image_path('ss-2.jpg')); background-position: center center;
 
-    h1 { font-weight: 800; font-family: $lato; font-size:50px; margin-bottom: 5px; color:$white; }
-    h3 { font-weight: 600; font-family: $lato; font-size: 30px; margin-top: 0; color:$light-gray; padding-top:0; padding-bottom:10px;}
-    p { font-style: italic; color: $white; font-size: 18px;}
+    h1 { font-weight: 800; font-family: $lato; font-size:50px; margin-bottom: 5px; color:$white; text-shadow: 0px 1px 1px rgba($black, .8); }
+    h3 { font-weight: 800; font-family: $lato; font-size: 30px; margin-top: 0; color:$light-gray; text-shadow: 0px 1px 1px rgba($black, .8); padding-top:0; padding-bottom:10px;}
+    p { font-style: italic; color: $white; font-size: 20px; font-weight: 600;text-shadow: 0px 1px 1px rgba($black, .8); width: 35%}
   }
 
-  .top-box{width: 50%; float: right; padding-right: 8%; margin-top: -5%; text-align: center;
-    .inner {@include sec-default(); padding: 20px; background-color: #f2f2f2;}
-    h4 { font-weight: 900; font-family: $lato; font-size: 21px; line-height: 1.3em;}
-  }
-
-
-  .about-p2 {
+  .about-p1 {
     @include sec-default ();
-    padding: 60px 0;
+    // .content {width: 75%; @include center-block(); border-bottom: 1px solid #dfdfdf;}
+    .txt, .video {display: inline-block; float: left; width: 40%;}
+    .txt {padding: 40px 0; width:53%}
+    .video {float: right; margin-top: -30px;}
+    .tm-vid {width: 100%; height: 330px;}
+    h4 { font-weight: 900; font-family: $lato; font-size: 21px; line-height: 1.3em;}
+    p{font-size: 18px;}
+  }
 
-    .story, .image, .video, .info {display: inline-block; float: left; width:35%; }
+  .ab-s {
+    @include sec-default(); padding: 25px 0; text-align: center;
 
-    .story {
-      background-color:darken($teal, 5%);
-      background-color: $dark;
-      text-align: center;
-      width: 50%; margin-left: 5%;
-      .inside {@include sec-default(); padding:40px 55px;}
-      p, h3 {text-shadow: 0px 1px 1px rgba($dark, .2); font-family: $roboto; font-weight: bold; }
-      p { color: $white; font-size: 18px; }
-      h3 {font-style: italic; color: $cream; }
-      hr {border-top: 1px solid rgba(white, .4);}
+    .service {display: inline-block; width: 22%; padding:25px 15px; text-align: center;
+      @include sec-bgimage();background-position: center center; margin-left: 2%;
+      position: relative; z-index: 0; &:before {@include before(); opacity: .9;}
+
+      h3{font-weight: bold; color: white; font-size: 20px; font-family: $raleway; float: right;}
+      .icon {width: 50px; height:50px; border-radius: 50%; background-color: white; float: left; @include grayscale();
+        @include sec-bgimage(); background-position: center center; background-size: 60%; }
+
+      &.wd {background-image: url(image_path('serv-wd.jpg'));
+        &:before {background-color: $teal;}
+        .icon {background-image: url(image_path('ihsdesign.png'));}
+      }
+
+      &.ec {background-image: url(image_path('serv-ec.jpg'));
+        &:before {background-color: #275d78;}
+        .icon {background-image: url(image_path('icon-shop.png'));}
+      }
+
+      &.da {background-image: url(image_path('serv-da.jpg'));
+        &:before {background-color: #20c0a9;}
+        .icon {background-image: url(image_path('ihsmarket.png'));}
+      }
+
+      &.pg {background-image: url(image_path('serv-pg.jpg'));
+        &:before {background-color: $dark2; opacity: .8;}
+        .icon {background-image: url(image_path('ihscamera.png'));}
+      }
+      &:hover {text-decoration: none;@include ease(); color: $dark;}
     }
-
-    .image{margin-top: 10%; margin-left: -30px; box-shadow: -5px 10px 20px rgba(black, .1);}
-
-    .video {width: 40%;}
   }
 
   .about-p3 {
-    @include sec-default ();
-    background-color: #f9f9f9;
-    // background-color: $teal;
+    @include sec-default (); padding: 20px 0 40px;
+    .image, .info {display: inline-block; float: left; }
 
-    .left {
-      @include sec-default ();
-      padding:40px 60px 30px;
+    .story {
+      @include sec-default(); padding:20px 50px 40px; background-color: #0588e9; text-align: center;
+      p { font-size: 18px; color: white; }
+      hr {border-top: 1px solid rgba(white, .4);}
+    }
+      h3 {color: rgba(5,136,233, .3); font-weight: 800; font-size: 22px; font-family: $raleway; font-style: italic;
+        width: 50%; @include center-block(); line-height: 1.3em; color: rgba($white, .9); }
 
-      p { color: $dark;}
+    .image{box-shadow: -5px 10px 20px rgba(black, .1); margin-top: -20px; margin-left: 10%; width:26%; }
+    .info { width:52%; margin-left: 2%;
+      p { color: $dark; font-size: 18px; display: inline-block; float: left; padding: 40px 30px 20px 20px; width: 50%;}
+    }
+  }
+
+  @include bp(tb) {
+    .ab-hd {height:auto; padding:20px 40px ;
+      p {width:75%}
     }
 
-    .right {
-      @include sec-default ();
+    .ab-s { padding-top:35px;
+      .service {
+        padding: 15px 10px; margin-left: 0;
+        .icon {@include center-block(); width: 40px; height:40px; }
+        h3 {float: none; }
+      }
+    }
+
+    .about-p1 {
+      .txt {padding: 40px 0 0;}
+      .video {margin-top:30px;}
+      .tm-vid {height: 300px;}
+      h4 { font-size: 19px; line-height: 1.3em;}
+      p{font-size: 16px;}
+    }
+
+    .about-p3 {padding: 20px 0;
+      h3 { font-size: 22px; width: 75%; }
+
+      .image{margin-left: 5%; width:30%; }
+      .info { width:60%;
+        p { font-size: 16px; padding: 20px;}
+      }
+    }
+  }
+
+  @include bp(md) {
+    .ab-hd {
+      h1 {font-size: 35px;}
+      h3 {font-size: 21px;}
+      p {font-size:19px;}
+    }
+
+    .ab-s { padding-top:35px;
+      .service {width:24%; margin-top: 10px;
+        .icon {width: 35px; height:35px; }
+        h3 {font-size: 17px; margin-top:13px;}
+      }
+    }
+
+    .about-p1 {
+      .txt {padding: 20px 0 0;width:90%; @include center-block();}
+      .video {margin-top:15px; width:45%; @include center-block();}
+      .tm-vid {height: 200px;}
+      h4 { font-size: 18px; line-height: 1.2em;}
+    }
+
+    .about-p3 {
+      h3 { font-size: 19px; width: 85%; }
+      .image{margin-top: 30px; }
+      .info {margin-left: 0; padding-top:10px; padding-left: 15px;
+        p {width: 95%; @include center-block(); padding: 5px 0;}
+      }
+    }
+  }
+
+  @include bp(pl) {
+    .ab-hd {padding:0 0 15px 15px;
+      h1 {font-size: 30px;}
+      h3 {padding-bottom:0;}
+      p {font-size:19px;width: 80%;}
+    }
+
+    .ab-s { padding-top:20px;
+      .service {width:40%;
+        .icon {float: left; }
+      }
+    }
+
+    .about-p1 {
+      .txt {width:95%;}
+      h4 {font-size: 16px;}
+    }
+
+    .about-p3 {
+      .story{padding:0 50px 15px;}
+      h3 { font-size: 17px; width: 95%; }
+      .image{margin-top: 20px; margin-left: 3%; }
+      .info {width:65%;
+        p {width: 100%; font-size: 15px; margin-bottom: 0;}
+      }
+    }
+  }
+
+  @include bp(sm) {
+    .ab-hd {position: relative; z-index: 0;
+      &:before {@include before(); background-color: rgba($black, .4);}
+      h1 {font-size: 25px;}
+      h3 {font-size: 18px;}
+      p {font-size:16px;width: 100%;}
+    }
+
+    .ab-s { padding-bottom: 0;
+      .service {width:48%; padding: 5px 0; margin: 5px auto;
+        .icon {display: none; }
+        h3 {font-size: 16px;}
+      }
+    }
+
+    .about-p1 {
+      .video{width: 70%;}
+      .tm-video {height: 150px;}
+    }
+
+    .about-p3 {
+      .story{padding:0 30px 15px; margin-bottom: 15px;}
+      h3 { font-size: 16px; width: 100%; font-weight: 600; }
+      .image{ @include center-block(); width: 40%}
+      .info {width:95%;@include center-block();
+        p {width: 100%; font-size: 15px; margin-bottom: 0;}
+      }
     }
   }
 }
@@ -1523,8 +1434,9 @@
     }
 }
 
-.photo-gallery {
-  .photography {@include sec-default(); padding: 60px 0;}
+.photo-gallery, .photos {
+  .hd-box {@include sec-default(); background-color: #f7f7f7; text-align: center; padding: 30px 0;}
+  .photography {@include sec-default(); padding: 30px 0;}
   .gall { display: inline-block; float: none; padding:5px; max-width: 33%; margin:auto;
     &.vert {height: 465px; width: auto;}
   }

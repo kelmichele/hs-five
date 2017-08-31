@@ -1,35 +1,25 @@
-<% @page_title = "Photography Gallery" %>
+<% @page_title = "Photography Portfolio" %>
 <% @page_description = "Photography is one of our specialties at High Seas. Scroll through our portfolio of photos, to see some of our work." %>
 
 <div class="hd-box">
   <h1>Photography Portfolio</h1>
-  <p>Here's a little secret we've learned. A majority of people will judge a website on two factors:<br> how quickly they find information and pretty photos.</p>
 </div>
 
-<div class="container">
+<div class="text-center"><%= will_paginate %></div>
 
-
-    <p>
-      Professionally taken photos are a very powerful sales tool. When you hire High Seas to build your website, we include a visit from our photographer, because showcasing high-quality images associated with your work, products you sell, or even a nice office space can be incredibly influential in convincing someone to bring their business to you. Similarly, displaying low-quality, obscure photos can have the opposite effect. Especially for ecommerce sites.
-    </p>
-
-    <p>
-      Product photos can make or break an online sale, so you don't want photos that are unfocused or unclear.
-      High Seas has more than our fair share of experience with product photos, and we are always happy to help our ecommerce clients who plan to take their own.
-      We can recommend equipment, help with the setup, and give you pointers for better photos.
-    </p>
-
-  <div class="photography">
-    <% @gphoto = (1..19) %>
+<div class="photography">
+  <div class="container">
+    <% @photo = (1..18) %>
 
     <% tag = 0 %>
-    <% @gphoto.each do |photo| %>
+    <% @photo.each do |photo| %>
       <% tag +=1 %>
       <% link = "https://s3.us-east-2.amazonaws.com/hsdh-gallery/gallery-img"+"#{tag}"+".jpg" %>
       <%= link_to(image_tag("#{link}", class: 'img-responsive gall', alt: 'High Seas Design House - Photography Gallery'), image_path("#{link}"), data: { lightbox: "example-set", title: "High Seas Design House Image Gallery"}) %>
     <% end %>
+    <div class="clearfix"></div>
 
-    <% @pphoto = (1..5) %>
+<!--     <% @pphoto = (1..5) %>
     <% tag = 0 %>
     <% @pphoto.each do |photo| %>
       <% tag +=1 %>
@@ -44,9 +34,8 @@
       <% link = "https://s3.us-east-2.amazonaws.com/hsdh-gallery/gallery-port"+"#{tag}"+".jpg" %>
       <%= link_to(image_tag("#{link}", class: 'img-responsive gall vert', alt: 'High Seas Design House - Photography Gallery'), image_path("#{link}"), data: { lightbox: "example-set", title: "High Seas Design House Image Gallery"}) %>
     <% end %>
+    <div class="clearfix"></div> -->
+
+
   </div>
-
-
-
-
 </div>
