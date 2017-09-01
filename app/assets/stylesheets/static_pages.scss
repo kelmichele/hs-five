@@ -1462,7 +1462,7 @@
     .gall { display: inline-block; padding: 5px; max-width: 30%; background-color: white; margin:10px;
 
       box-shadow: 5px 5px 8px rgba($dark, .2);
-      &.vert {height: auto; max-width: 16%; }
+      &.vert {height: auto; max-width: 28%; }
     }
     .item.two a:nth-child(4) {display: none;}
     .topbox {@include sec-default(); background-color: white; margin:15px 0; padding: 20px;
@@ -1486,15 +1486,15 @@
   }
 
   @include bp(tb) {
-    .photography {padding: 15px 0;}
+    .photography {padding: 15px 5px;}
     .box, .carousel {@include center-block(); width:90%;}
-    .box {width: 95%; background-color: transparent; text-align: left; margin-top: 0;
+    .box {@include sec-default(); margin:15px 0; padding: 25px 40px;
       p{font-size: 15px; margin-bottom: 5px;}
-      hr {display: none;}
+      hr {margin: 10px 0;}
     }
   }
 
-  @include bp(tb) {
+  @include bp(md) {
     .box, .carousel {@include sec-default();}
   }
 
@@ -1524,8 +1524,6 @@
     }
   }
 }
-
-
 
 
 

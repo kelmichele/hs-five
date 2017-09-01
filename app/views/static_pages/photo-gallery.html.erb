@@ -9,14 +9,6 @@
 
 <div class="photography">
   <div class="container-fluid">
-    <div class="box">
-      <p>Because professionally taken photos are a very powerful sales tool, when High Seas is hired to build a website, we include a visit from our photographer.</p>
-      <hr>
-      <p>Showcasing high-quality images associated with your work, products you sell, or even a nice office space can be incredibly influential in convincing someone to bring their business to you. Similarly, displaying low-quality, obscure photos can have the opposite effect.</p>
-      <hr>
-      <p> This is especially true for ecommerce sites, when product photos can make or break a sale.</p>
-    </div>
-
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
       <div class="carousel-inner" role="listbox">
         <div class="item active">
@@ -38,6 +30,25 @@
             <%= link_to(image_tag("#{link}", class: 'img-responsive gall', alt: 'High Seas Design House - Photography Gallery'), image_path("#{link}"), data: { lightbox: "example-set", title: "High Seas Design House Image Gallery"}) %>
           <% end %>
         </div>
+
+        <div class="item">
+          <% @vphoto = (1..3) %>
+          <% tag = 0 %>
+          <% @vphoto.each do |photo| %>
+            <% tag +=1 %>
+            <% link = "https://s3.us-east-2.amazonaws.com/hsdh-gallery/gallery-port"+"#{tag}"+".jpg" %>
+            <%= link_to(image_tag("#{link}", class: 'img-responsive gall vert', alt: 'High Seas Design House - Photography Gallery'), image_path("#{link}"), data: { lightbox: "example-set", title: "High Seas Design House Image Gallery"}) %>
+          <% end %>
+          <div class="clearfix"></div>
+
+          <% @pphoto = (1..5) %>
+          <% tag = 0 %>
+          <% @pphoto.each do |photo| %>
+            <% tag +=1 %>
+            <% link = "https://s3.us-east-2.amazonaws.com/hsdh-gallery/gallery-prod"+"#{tag}"+".jpg" %>
+            <%= link_to(image_tag("#{link}", class: 'img-responsive gall', alt: 'High Seas Design House - Photography Gallery'), image_path("#{link}"), data: { lightbox: "example-set", title: "High Seas Design House Image Gallery"}) %>
+          <% end %>
+        </div>
       </div>
 
         <div class="controls">
@@ -48,6 +59,14 @@
             <span>Next</span>
           </a>
         </div>
+    </div>
+
+    <div class="box">
+      <p>Because professionally taken photos are a very powerful sales tool, when High Seas is hired to build a website, we include a visit from our photographer.</p>
+      <hr>
+      <p>Showcasing high-quality images associated with your work, products you sell, or even a nice office space can be incredibly influential in convincing someone to bring their business to you. Similarly, displaying low-quality, obscure photos can have the opposite effect.</p>
+      <hr>
+      <p> This is especially true for ecommerce sites, when product photos can make or break a sale.</p>
     </div>
   </div>
 </div>
