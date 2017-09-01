@@ -417,7 +417,6 @@
 
   .about-p1 {
     @include sec-default ();
-    // .content {width: 75%; @include center-block(); border-bottom: 1px solid #dfdfdf;}
     .txt, .video {display: inline-block; float: left; width: 40%;}
     .txt {padding: 40px 0; width:53%}
     .video {float: right; margin-top: -30px;}
@@ -469,12 +468,19 @@
       p { font-size: 18px; color: white; }
       hr {border-top: 1px solid rgba(white, .4);}
     }
-      h3 {color: rgba(5,136,233, .3); font-weight: 800; font-size: 22px; font-family: $raleway; font-style: italic;
-        width: 50%; @include center-block(); line-height: 1.3em; color: rgba($white, .9); }
+    h3 {color: rgba(5,136,233, .3); font-weight: 800; font-size: 22px; font-family: $raleway; font-style: italic;
+      width: 50%; @include center-block(); line-height: 1.3em; color: rgba($white, .9); }
 
     .image{box-shadow: -5px 10px 20px rgba(black, .1); margin-top: -20px; margin-left: 10%; width:26%; }
     .info { width:52%; margin-left: 2%;
       p { color: $dark; font-size: 18px; display: inline-block; float: left; padding: 40px 30px 20px 20px; width: 50%;}
+    }
+  }
+
+  @media (max-width: 1205px) {
+    .ab-s .service {
+      h3 {font-size: 17px;}
+      .icon {width:40px; height:40px; margin-top: 10px;}
     }
   }
 
@@ -485,8 +491,8 @@
 
     .ab-s { padding-top:35px;
       .service {
-        padding: 15px 10px; margin-left: 0;
-        .icon {@include center-block(); width: 40px; height:40px; }
+        padding: 10px; margin-left: 0;
+        .icon {@include center-block(); margin-top: 0;}
         h3 {float: none; }
       }
     }
@@ -549,10 +555,8 @@
 
     .ab-s { padding-top:20px;
       .service {
-        width: 31%;
-        // width:40%;
-        // .icon {float: left; }
-        .icon {display: none;}
+        width:40%;
+        .icon {float: left; }
         h3 {font-size: 16px;}
       }
     }
@@ -582,9 +586,9 @@
 
     .ab-s { padding-bottom: 0;
       .service {padding: 5px 0; margin: 5px auto;
-        // width:48%;
-        // .icon {display: none; }
-        // h3 {font-size: 16px;}
+        width:48%;
+        .icon {display: none; }
+        h3 {font-size: 15px;}
       }
     }
 
@@ -601,6 +605,10 @@
         p {width: 100%; font-size: 15px; margin-bottom: 0;}
       }
     }
+  }
+
+  @include bp(xx) {
+    .ab-s .service {width:49%; h3 {font-size: 15px;}}
   }
 }
 
