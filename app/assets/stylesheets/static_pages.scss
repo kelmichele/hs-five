@@ -1441,9 +1441,84 @@
 }
 
 .photo-gallery, .photos {
+  font-family: $poppins;
   .hd-box {@include sec-default(); background-color: #f7f7f7; text-align: center; padding: 30px 0;}
-  .photography {@include sec-default(); padding: 30px 0;}
-  .gall { display: inline-block; float: none; padding:5px; max-width: 33%; margin:auto;
-    &.vert {height: 465px; width: auto;}
+  .photography {@include sec-default(); padding: 30px 10px; text-align: center; background-color: #f1f2f4;}
+  h1 {font-weight: 900}
+
+  .carousel, .box {display: inline-block; float: left;}
+  .carousel {width: 78%;}
+  .box{width: 20%; float: right; padding:30px 20px; background-color: white; margin-top:10px;}
+
+  .carousel.slide {
+    .gall { display: inline-block; padding: 5px; max-width: 30%; background-color: white; margin:10px;
+
+      box-shadow: 5px 5px 8px rgba($dark, .2);
+      &.vert {height: auto; max-width: 16%; }
+    }
+    .item.two a:nth-child(4) {display: none;}
+    .topbox {@include sec-default(); background-color: white; margin:15px 0; padding: 20px;
+      p {width: 80%; @include center-block();}
+      .gall {box-shadow: none;}
+    }
+
+    .controls { width:90%; @include center-block(); padding-top: 10px;
+      a {color: black; font-weight: bold;}
+      a.carousel-control-next {float: right;}
+      a.carousel-control-prev {float: left;}
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .photography {padding: 30px 60px; }
+    .carousel {width: 78%;}
+    .box{width: 20%; padding:30px 20px;
+      p{margin-bottom: 20px;}
+    }
+  }
+
+  @include bp(tb) {
+    .photography {padding: 15px 0;}
+    .box, .carousel {@include center-block(); width:90%;}
+    .box {width: 95%; background-color: transparent; text-align: left; margin-top: 0;
+      p{font-size: 15px; margin-bottom: 5px;}
+      hr {display: none;}
+    }
+  }
+
+  @include bp(tb) {
+    .box, .carousel {@include sec-default();}
+  }
+
+  @include bp(pl) {
+    .hd-box {padding:0 ; h1{margin:10px 0; font-size: 25px;}}
+    .photography {padding: 0;}
+    .box, .carousel {@include sec-default();}
+    .box {padding: 15px; padding-bottom: 0;}
+    .carousel {padding-bottom: 10px;}
+  }
+
+  @include bp(pl) {
+    .carousel.slide {
+      .gall {max-width: 29%; margin: 5px;}
+    }
+  }
+
+  @include bp(sm) {
+    .carousel.slide {
+      .gall {max-width: 45%; margin-left: 10px;}
+    }
+  }
+
+  @include bp(sm) {
+    .carousel.slide {
+      .gall {margin-left: 5px;}
+    }
   }
 }
+
+
+
+
+
+

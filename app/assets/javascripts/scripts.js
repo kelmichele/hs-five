@@ -102,14 +102,14 @@ $(document).ready(function() {
 			masonry: {
 			  columnWidth: 0
 			}
-			});
 		});
+	});
 
 
-		$('.carousel').carousel({
-			wrap: false,
-			keyboard: true
-		});
+	$('.carousel').carousel({
+		wrap: false,
+		keyboard: true
+	});
 
 
 
