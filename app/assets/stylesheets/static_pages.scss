@@ -1851,7 +1851,32 @@
 
     .shop {
       .top h3 {font-size:20px; margin-top:10px;}
+      p{margin-bottom: 12px;}
     }
+  }
+
+  @include bp(sm) {
+    .shop-header {height:155px; padding-top:0;}
+
+    .hsdh { padding-bottom:30px;
+      .left {margin-top:-5px;}
+      .right {margin-top: 10px;}
+      .block {width:92%; margin-bottom:10px;}
+      p{font-size: 15px; padding-bottom:5px; }
+    }
+
+    .dbl-link {
+      .left, .right { padding: 0 15px;
+        h3 {font-size: 16px;padding:10px; line-height: 1.4em;}
+      }
+    }
+
+    .port .carousel.slide {
+      .rslide {display: none;}
+      .lslide {width: 90%;}
+      .item .extras {width:25%;}
+    }
+
   }
 }
 
