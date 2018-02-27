@@ -1636,16 +1636,6 @@
   .port{@include sec-default(); background-color: $g1;
     background-color: #f2f2f2;
     position: relative; z-index: 0;
-    // &::before {@include before(); width: 10%; background: lighten($g1, 15%);}
-    // &::after {@include before(); width: 18%; background: darken($g1, 15%); left:82%;}
-
-    // .lefty, .carousel.slide {display: inline-block;}
-    // .lefty {width: 10%; float: left; padding: 10px;
-    //   h3 {color: white; font-weight: 800; text-align: center; font-size: 30px; text-transform: uppercase; letter-spacing: 2px;
-    //     position: absolute; left:-12%; top:40%;
-    //     -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg);
-    //   }
-    // }
     $ash: #b6aea7;
     $zip: #48a02e;
     $cronin: #30c4e3;
@@ -1653,6 +1643,7 @@
     .carousel.slide {
       @include sec-default();
       padding: 40px 20px 20px;
+      // height:705px;
       .indicators {display: inline-block; display: none; width: 10%; margin-left:3%; padding-left:0px; margin-top:10%;
         cursor: pointer;
         li {@include sec-default(); margin-bottom:20px;}
@@ -1661,7 +1652,13 @@
       .carousel-inner {width: 90%;@include center-block(); text-align: center;}
 
       .lslide, .rslide{display: inline-block; width: 45%; float:left; position: relative; z-index: 0; padding:40px 15px 30px 0; margin-left:2.5%;
-        &::before {@include before(); width:70%; height: 40%;  }
+        &::before {@include before(); width:70%; height: 40%;
+          // -webkit-transform: rotate(-8deg);
+          // -moz-transform: rotate(-8deg);
+          // -o-transform: rotate(-8deg);
+          // -ms-transform: rotate(-8deg);
+          // transform: rotate(-8deg);
+        }
 
         &.ash::before{background-color: darken($ash, 5%);}
         &.zip::before{background-color: darken($zip, 5%);}
@@ -1670,10 +1667,12 @@
 
       }
 
-      .item {height: 600px;
+      .item {
+        // height: 670px;
         .images{display:inline-block; width: 70%; float: right; }
         img {box-shadow: 10px 10px 30px rgba(black, .2); border-left:1px solid rgba(black,.1);}
-        .extras {display:inline-block; width:25%; margin-top:10%; font-size: 22px; line-height: 1.2em; padding:10px; border: 1px solid rgba(white, .6); color: white; text-align: center; letter-spacing:1px;
+        .extras {display:inline-block; width:20%; margin-top:10%; font-size: 22px; line-height: 1.2em; padding:10px;  color: white; text-align: center; letter-spacing:1px;
+          position: relative; z-index: 0; &::before {@include before(); width:70%; height:75px; border: 1px solid rgba(white, .6); left:5%;}
           span{font-weight: bold;}
           &:hover {opacity: .7; text-decoration: none;}
         }
@@ -1757,8 +1756,9 @@
         }
 
         .item {
-          height: 500px;
-          .extras { margin-top:7%; font-size: 16px;}
+          .extras { margin-top:7%; font-size: 16px;
+            &::before { height:60px; }
+          }
         }
 
         .carousel-control.left {left:0;}
@@ -1784,19 +1784,44 @@
       .block{width:42%; margin: 10px 2% 15px;}
     }
 
-    .shop {
-      .left, .right {width:49%;}
-    }
-  }
-
-  @include bp(md) {
-    .shop {
-      .left, .right {@include sec-default(); text-align: left;padding: 0 25px; }
-      p{padding-right:5%;
-        &:nth-child(2n+2) {padding-left:5%; padding-right:0;}
+    .dbl-link {
+      .left, .right {
+        h3 {font-size: 18px;margin:15px 0; }
       }
     }
 
+    .shop {
+      .left, .right {width:49%;}
+    }
+
+    .port .carousel.slide {padding: 20px 20px 0px;
+      .lslide, .rslide {padding-bottom: 20px;}
+      .item .extras::before {width:72%;}
+    }
+  }
+
+  @include bp(tn) {
+    .hsdh {
+      .left {width:70%;}
+      .right{margin-top: 35px;}
+    }
+    .port .carousel.slide .item .extras {
+      font-size: 15px; padding:10px 0 0; margin-top:4%; text-align: left;
+      &::before {width:87%; left:-8px;}
+    }
+
+    .shop {
+      .top {margin-bottom: 5px;}
+      .left, .right {@include sec-default(); text-align: left;padding: 0 25px; }
+      .left {
+        p{padding-right:5%;}
+        p:nth-child(2) {padding-left:5%; padding-right:0;}
+      }
+      .right {
+        p{padding-left:5%;}
+        p:nth-child(2) {padding-right:5%; padding-left:0;}
+      }
+    }
   }
 }
 
