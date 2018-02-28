@@ -1548,6 +1548,7 @@
     .shop-txt {width: 135px; margin-bottom:10px; }
     .shop-txt2 {width: 260px; margin-bottom:10px; }
     background-color: $g1;
+    background-color: $prp;
   }
   .border-slope {
     overflow: hidden;
@@ -1575,24 +1576,25 @@
       display: inline-block; margin-left:1.5%;
       padding:10px 20px 15px;
       width:47%; margin-bottom: 15px;
-      // background-image: url(image_path('shop-icon.png'));
-      // background-position: center center; background-size: 15%; background-repeat: no-repeat;background-color: rgba($white, .65);
       position: relative;z-index: 0;
       &::before {@include before(); background-color: lighten($prp, 40%); background-color: #f2f2f2;
         -webkit-transform: rotate(-10deg); -moz-transform: rotate(-10deg); -o-transform: rotate(-10deg); -ms-transform: rotate(-10deg); transform: rotate(-10deg);
-
-        // top:28%;left:1%; width: 125px; height:125px;
       }
       h4 {font-weight: bold; color: lighten($prp, 10%); font-family: $josef; text-transform: uppercase;}
     }
 
     .left, .right {display: inline-block;}
     .left {width: 30%; float: left; margin-top:5%; margin-left:7%;
-      h3 {font-size: 20px; line-height: 1.4em;
-        // position: relative;z-index: 0;
-        // &::before {@include before(); background-color: rgba($g1, .4);
-        //   -webkit-transform: rotate(-8deg); -moz-transform: rotate(-8deg); -o-transform: rotate(-8deg); -ms-transform: rotate(-8deg); transform: rotate(-8deg);
-        // }
+      h3 {font-size: 20px; line-height: 1.4em;}
+      .pt-link{font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 18px;
+        i {color: #73c06b; font-size: 20px; }
+        position: relative;z-index: 0;
+        &::before {@include before(); background-color: #f99872; width:40px; height:40px; left:-15px; top:-5px;
+          -webkit-transform: rotate(-25deg); -moz-transform: rotate(-25deg); -o-transform: rotate(-25deg); -ms-transform: rotate(-25deg); transform: rotate(-25deg);
+        }
+        &:hover {text-decoration: none; opacity: .7;
+          &::before {background-color: #df248b ; opacity: .9;}
+        }
       }
     }
 
@@ -1603,7 +1605,7 @@
     .left, .right {display: inline-block; width: 50%; float:left; @include sec-bgimage(); text-align: center; position: relative;z-index: 0;padding: 0px 30px; border:1px solid rgba(white, .6);
       background-image: url(image_path('ecom/rack.jpg'));
       &::before {@include before(); background-color: rgba(black, .7);}
-      h3 {color: white; font-weight: bold; font-size: 24px; font-family: $josef; padding: 20px; margin:20px 0; border:1px solid rgba(white, .6);}
+      h3 {color: white; font-weight: bold; font-size: 24px; padding: 20px; margin:20px 0; border:1px solid rgba(white, .6);}
       &:hover {text-decoration: none; opacity: .75;}
     }
     .right {background-position: bottom right;}
@@ -1642,8 +1644,59 @@
     $bar: #397eed;
     .carousel.slide {
       @include sec-default();
-      padding: 40px 20px 20px;
-      // height:705px;
+      padding: 20px 20px 20px;
+      .indicators {display: inline-block; display: none; width: 10%; margin-left:3%; padding-left:0px; margin-top:10%;
+        cursor: pointer;
+        li {@include sec-default(); margin-bottom:20px;}
+      }
+
+      .carousel-inner {width: 90%;@include center-block(); text-align: center;}
+
+      .lslide, .rslide{display: inline-block; width: 45%; float:left; position: relative; z-index: 0; padding:40px 15px 30px 0; margin-left:2.5%;
+        &::before {@include before(); width:70%; height: 40%;}
+        &.ash::before{background-color: darken($ash, 5%);}
+        &.zip::before{background-color: darken($zip, 5%);}
+        &.cronin::before{background-color: darken($cronin, 5%);}
+        &.bar::before{background-color: darken($bar, 5%);}
+      }
+      .x-img {padding:20px 0;
+        display: inline-block; width: 40%; margin-left: 2%;
+        img{ width:80%; margin:15px 0; float: left;
+          &.uno{width:85%; -webkit-transform: rotate(-8deg); -moz-transform: rotate(-8deg); -o-transform: rotate(-8deg); -ms-transform: rotate(-8deg); transform: rotate(-8deg);}
+          &.dos{float:right; margin-right:20px; -webkit-transform: rotate(8deg); -moz-transform: rotate(8deg); -o-transform: rotate(8deg); -ms-transform: rotate(8deg); transform: rotate(8deg);}
+        }
+      }
+      .x-img.ash, .x-img.bar{ img.dos{margin-top: -30px;}}
+      .x-img.cronin img.dos{margin-top: -15px; }
+
+
+      .item {
+        .images{display:inline-block; width: 70%; float: right; }
+        img {box-shadow: 10px 10px 30px rgba(black, .2); border-left:1px solid rgba(black,.1);}
+        .extras {display:inline-block; width:20%; margin-top:10%; font-size: 22px; line-height: 1.2em; padding:10px;  color: white; text-align: center; letter-spacing:1px;
+          position: relative; z-index: 0; &::before {@include before(); width:70%; height:75px; border: 1px solid rgba(white, .6); left:5%;}
+          span{font-weight: bold;}
+          &:hover {opacity: .7; text-decoration: none;}
+        }
+      }
+
+      .carousel-control {width:5%; height:50px; top: 45%;
+        &.left {left:-1%;}
+      }
+
+    }
+  }
+
+  .p2{@include sec-default(); background-color: $g1;
+    background-color: #f2f2f2;
+    position: relative; z-index: 0;
+    $ash: #b6aea7;
+    $zip: #48a02e;
+    $cronin: #30c4e3;
+    $bar: #397eed;
+    .carousel.slide {
+      @include sec-default();
+      padding: 20px 20px 20px;
       .indicators {display: inline-block; display: none; width: 10%; margin-left:3%; padding-left:0px; margin-top:10%;
         cursor: pointer;
         li {@include sec-default(); margin-bottom:20px;}
@@ -1664,7 +1717,16 @@
         &.zip::before{background-color: darken($zip, 5%);}
         &.cronin::before{background-color: darken($cronin, 5%);}
         &.bar::before{background-color: darken($bar, 5%);}
-
+      }
+      .x-img {padding:20px 0;
+        display: inline-block; width: 40%; margin-left: 2%;
+        img{ width:80%; margin:15px 0; float: left;
+          &.uno{width:85%; -webkit-transform: rotate(-8deg); -moz-transform: rotate(-8deg); -o-transform: rotate(-8deg); -ms-transform: rotate(-8deg); transform: rotate(-8deg);}
+          &.dos{float:right; -webkit-transform: rotate(8deg); -moz-transform: rotate(8deg); -o-transform: rotate(8deg); -ms-transform: rotate(8deg); transform: rotate(8deg);}
+        }
+      }
+      .x-img.ash{
+        img.dos{margin-top: -30px; margin-right:20px;}
       }
 
       .item {
@@ -1680,45 +1742,6 @@
       .carousel-control {width:5%; height:50px; top: 45%;
         &.left {left:-1%;}
       }
-
-    }
-  }
-
-  .p2{@include sec-default(); background-color: $g1;
-    position: relative; z-index: 0;
-    &::before {@include before(); width: 10%; background: lighten($g1, 15%);}
-    &::after {@include before(); width: 18%; background: darken($g1, 15%); left:82%;}
-
-    .lefty, .carousel.slide {display: inline-block;}
-    .lefty {width: 10%; float: left; padding: 10px;
-      h3 {color: white; font-weight: 800; text-align: center; font-size: 30px; text-transform: uppercase; letter-spacing: 2px;
-        position: absolute; left:-12%; top:40%;
-        -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg);
-      }
-    }
-
-    .carousel.slide {width: 90%; padding: 20px 20px 0; border-bottom: 1px solid #ddd; float:right;
-      padding-bottom:20px;
-      .indicators {display: inline-block; width: 10%; margin-left:3%; padding-left:0px; margin-top:10%;
-        cursor: pointer;
-        li {@include sec-default(); margin-bottom:20px;}
-      }
-
-      .carousel-inner {width:75%; display: inline-block; float: left; margin-left: 7%; background-color: #f2f2f2;}
-
-      .item {height:650px;
-        .images{display:inline-block; width: 75%; float: left;}
-        img {height: 650px;}
-        .extras {display:inline-block; width:18%; margin-left: 2%; margin-top:5%; font-size: 22px; padding:10px; border: 1px solid white; color: white; text-align: center; letter-spacing:1px;
-          span{font-weight: bold;}
-          &:hover {opacity: .7; text-decoration: none;}
-        }
-      }
-
-      .carousel-control {width:5%; height:50px; top: 45%;
-        &.left {left:-1%;}
-      }
-
 
     }
   }
@@ -1802,9 +1825,11 @@
       .left {width:70%;}
       .right{margin-top: 35px;}
     }
-    .port .carousel.slide .item .extras {
-      font-size: 15px; padding:10px 0 0; margin-top:4%; text-align: left;
-      &::before {width:87%; left:-8px;}
+    .port .carousel.slide { height:425px; overflow: hidden;
+      .item .extras {
+        font-size: 15px; padding:10px 0 0; margin-top:4%; text-align: left;
+        &::before {width:87%; left:-8px;}
+      }
     }
 
     .shop {
@@ -1830,6 +1855,10 @@
       .shop-txt2 {width: 210px;}
     }
     .border-slope {height:290px;margin-bottom:-290px;}
+
+    .port .carousel.slide {height: 405px;
+      .x-img {padding:10px 0;}
+    }
   }
 
   @include bp(pl) {
@@ -1840,7 +1869,7 @@
       .right{margin-top: 35px;}
     }
 
-    .port .carousel.slide {
+    .port .carousel.slide { height:390px;
       .carousel-inner {width: 98%;}
 
       .lslide, .rslide{padding:20px 10px 30px 5px;
@@ -1871,10 +1900,11 @@
       }
     }
 
-    .port .carousel.slide {
+    .port .carousel.slide { height: 410px;
       .rslide {display: none;}
       .lslide {width: 90%;}
       .item .extras {width:25%;}
+      .x-img {display: none;}
     }
 
   }
