@@ -67,6 +67,9 @@ header { padding:0px 15px;
   .megamenu-parent.menu-fade-up .has-child:hover >.dropdown{-webkit-animation:spMenuFadeInUp 400ms; animation:spMenuFadeInUp 400ms;}
 }
 
+.shop-nav {height:20px;}
+
+
 .top-contact {@include sec-default (); padding:10px 15px 0 0; font-weight:bold;}
 .tel-head { float: left; color: $b-gray; font-size: 15px;font-family: $lato;
   &:hover {color: $teal;}
