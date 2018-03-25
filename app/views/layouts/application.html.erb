@@ -7,7 +7,13 @@
 	    <meta name="description" content= "<%= @page_description %>">
 	    <link rel="shortcut icon" href="/favicon.png">
 
-	    <title><%= @page_title  %> | High Seas Design House</title>
+	    <title>
+	    	<% if current_page?(root_path) %>
+	    		<%= @page_title  %>
+	    		<% else %>
+		    	<%= @page_title  %> | High Seas Design House
+		    	<% end %>
+	    </title>
 		<%= csrf_meta_tags %>
 		<!--[if lt IE 9]>
 		  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
