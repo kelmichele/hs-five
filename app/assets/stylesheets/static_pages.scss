@@ -64,28 +64,27 @@
 
     .about-link{
       padding:10px 15px;
-      border-radius: 5px;
+      border-radius: 20px;
       width: 40%;
       text-align: center;
       color: $white;
       font-size: 18px;
       background-color: $teal;
       @include center-block();
-      &:hover { text-decoration: none; font-weight: bold; background-color: $white; color: $teal;
+      &:hover { text-decoration: none; opacity: .6;
       -webkit-transition: all .4s ease;
       transition: all .4s ease;}
     }
   }
 
   .hcontent-body {
-    @include sec-default ();
-    @include sec-bgimage ();
-    background-image: url(image_path('workspacebw.jpg'));
-    background-attachment: fixed;
+    @include sec-default(); @include sec-bgimage();
+    background-image: url(image_path('workspacebw.jpg'));background-repeat: repeat;background-attachment: fixed;
+    // background-color: $f6;
 
     .hcontent-inner {
       @include sec-default ();
-      background-color: rgba($black, 0.5);
+      // background-color: rgba($black, 0.5);
       padding: 40px;
     }
 
@@ -109,7 +108,9 @@
     padding-right: 20px;
     margin-bottom: 30px;
 
-    .content {  background: $cream;padding: 20px 30px;}
+    .content {  background: $cream;padding: 20px 30px;
+      box-shadow: 5px 10px 20px rgba(black, .1);
+    }
     .hs-icon {
       @include center-block ();
       height:90px;
@@ -117,12 +118,12 @@
       &.tall { height:100px;}
     }
 
-    .service-link { width:70%; text-align: center; @include center-block (); padding:10px;}
+    .service-link { width:70%; text-align: center; @include center-block (); padding:10px; border-radius: 20px;}
 
     &:hover {
       .title {
-        -webkit-transform: scale(1.03); -ms-transform: scale(1.03); transform: scale(1.03);
-        -webkit-transition: all .3s ease; transition: all .3s ease;
+        // -webkit-transform: scale(1.03); -ms-transform: scale(1.03); transform: scale(1.03);
+        // -webkit-transition: all .3s ease; transition: all .3s ease;
         .title-a:hover { text-decoration: none;}
       }
     }
@@ -148,7 +149,7 @@
       padding-left:30px;
     }
     .service-link {
-      display: inline-block; width: 40%; margin: 0 10px; float: none;
+      display: inline-block; width: 40%; margin: 0 10px; float: none; border-radius: 20px;
     }
     .service-link:hover { background-color: $teal; color: $white; border:1px solid $dark;}
     .p-img { width: 30%;  display: inline-block;
