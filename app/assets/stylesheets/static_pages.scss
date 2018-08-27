@@ -14,6 +14,15 @@
     .video-holder .video-frame {@include sec-default (); position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
     .video-holder {@include sec-bgimage ();overflow: hidden;}
 
+
+      .video-holder {
+        background-image: url(image_path('new-bg2.png')); background-position: center bottom;
+        background-size: cover;
+        .video-frame{display: none;}
+      }
+
+
+
     .over-holder {
       @include sec-default (); padding: 100px 0; margin-top:10%; width: 100%; height: 100%;
       background-image: url(image_path('hsdh-opac.png'));background-size: 35%;background-position: left center;background-repeat: no-repeat;
