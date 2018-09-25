@@ -158,7 +158,7 @@
       padding-left:30px;
     }
     .service-link {
-      display: inline-block; width: 40%; margin: 0 10px; float: none; border-radius: 20px;
+      display: inline-block; width: 40%; margin: 0 10px; float: none; border-radius: 0px;
     }
     .service-link:hover { background-color: $teal; color: $white; border:1px solid $dark;}
     .p-img { width: 30%;  display: inline-block;
@@ -167,6 +167,22 @@
       &.last {border-right: 0;}
     }
     hr.small {display: none;}
+
+    .top-logo {@include sec-default(); padding: 20px 0px;
+      border-bottom: 1px solid #dfdfdf;border-top: 1px solid #dfdfdf; margin: 15px 0;
+    }
+    .aws{width: 50%; @include center-block();}
+  }
+
+  .partner-block { @include sec-default();
+    .inner {width: 90%; @include center-block();}
+
+    .top, .btm {@include sec-default(); text-align: center;}
+    .p-img { display: inline-block; padding: 10px; float:none; margin: 10px 2%; width:20%;}
+      // border-right: 1px solid #dfdfdf;
+      // &.last {border-right: 0;}
+    // .top .p-img { width: 30%;}
+    // .btm .p-img {width: 23%;}
   }
 
   @include bp(dt) {
@@ -237,6 +253,19 @@
       .right {padding: 0; text-align: center;}
       .p-img { padding: 0px 6px; border-right:none; float: none;width: 15%;}
       hr.small, hr.large {display: none;}
+    }
+
+    .partner-block{padding:15px 0;
+      .inner {width: 95%;}
+      .top {margin-bottom: 10px;
+        .p-img { width: 22%; }
+      }
+    }
+  }
+
+  @include bp(tn) {
+    .partner-block{
+      .p-img {padding: 10px 0px;}
     }
   }
 

@@ -124,7 +124,7 @@
   </div>
 </section>
 
-<section class="partners">
+<section style="display: none;" class="partners">
   <div class="container-fluid">
     <div class="col-md-5 col-xs-12 lft">
       <div class="left">
@@ -145,7 +145,9 @@
         <%=image_tag( 'partner-s.png', alt: 'High Seas Design House, Orange Beach, Al - Shopify Partners', class: 'img-responsive p-img' ) %>
         <hr class="small">
         <%=image_tag( 'partner-v.png', alt: 'High Seas Design House, Orange Beach, Al - Vend Partners', class: 'img-responsive p-img last xsbord' ) %>
-        <hr class="large">
+        <!-- <hr class="large"> -->
+        <div class="top-logo"><%=image_tag( 'aws.png', alt: 'High Seas Design House, Orange Beach, Al - AWS Certified' , class: 'img-responsive aws') %></div>
+
         <%=image_tag( 'partner-g.png', alt: 'High Seas Design House, Orange Beach, Al - Git Users', class: 'img-responsive p-img' ) %>
         <hr class="small">
         <%=image_tag( 'partner-b.png', alt: 'High Seas Design House, Orange Beach, Al - Bing Partners', class: 'img-responsive p-img xsbord' ) %>
@@ -155,3 +157,31 @@
   </div>
 </section>
 
+<section class="partner-block">
+  <div class="inner">
+    <!--<div class="left">
+        <h2>Let's Build Something Together</h2>
+          <%= link_to "contact#contact", class: 'service-link one' do %>
+            <span>Request a Quote</span>
+          <% end %>
+
+          <%= mail_to "info@hsdesignhouse.com", "Email Us", encode: "hex", class: 'service-link two' do %>
+            <span>Send Your Resume</span>
+          <% end %>
+      </div>
+    </div> -->
+
+    <div class="top">
+      <%=image_tag( 'aws.png', alt: 'High Seas Design House, Orange Beach, Al - AWS Certified' , class: 'img-responsive p-img') %>
+      <%=image_tag( 'partner-goo.png', alt: 'High Seas Design House, Orange Beach, Al - Google Partners' , class: 'img-responsive p-img') %>
+      <%=image_tag( 'partner-s.png', alt: 'High Seas Design House, Orange Beach, Al - Shopify Partners', class: 'img-responsive p-img' ) %>
+    </div>
+
+    <div class="btm">
+      <%=image_tag( 'partner-v.png', alt: 'High Seas Design House, Orange Beach, Al - Vend Partners', class: 'img-responsive p-img last' ) %>
+      <%=image_tag( 'partner-g.png', alt: 'High Seas Design House, Orange Beach, Al - Git Users', class: 'img-responsive p-img' ) %>
+      <%=image_tag( 'partner-b.png', alt: 'High Seas Design House, Orange Beach, Al - Bing Partners', class: 'img-responsive p-img' ) %>
+      <%=image_tag( 'partner-va.png', alt: 'High Seas Design House, Orange Beach, Al - Vantive Partners', class: 'img-responsive p-img last' ) %>
+    </div>
+  </div>
+</section>
