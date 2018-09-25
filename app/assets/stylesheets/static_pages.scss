@@ -88,11 +88,12 @@
 
   .hcontent-body {
     @include sec-default(); @include sec-bgimage();
-    background-image: url(image_path('workspacebw.jpg'));background-repeat: repeat;background-attachment: fixed;
-    // background-color: $f6;
+    // background-image: url(image_path('workspacebw.jpg'));background-repeat: repeat;background-attachment: fixed;
+    background-color:#87e2d0;
+    // background-color: #cde7fa;
 
     .hcontent-inner {
-      @include sec-default ();
+      @include sec-default();
       // background-color: rgba($black, 0.5);
       padding: 40px;
     }
@@ -104,6 +105,7 @@
     }
     h2 {
       font-weight: 800; color: $white;
+      color: $dark;
       padding:0px; margin:0;
       line-height: 1.2em;
       font-family: $raleway; text-transform: uppercase;
@@ -127,7 +129,7 @@
       &.tall { height:100px;}
     }
 
-    .service-link { width:70%; text-align: center; @include center-block (); padding:10px; border-radius: 20px;}
+    .service-link { width:70%; text-align: center; @include center-block (); padding:10px; border-radius: 0px;}
 
     &:hover {
       .title {
@@ -176,13 +178,8 @@
 
   .partner-block { @include sec-default();
     .inner {width: 90%; @include center-block();}
-
-    .top, .btm {@include sec-default(); text-align: center;}
+    .top {@include sec-default(); text-align: center;}
     .p-img { display: inline-block; padding: 10px; float:none; margin: 10px 2%; width:20%;}
-      // border-right: 1px solid #dfdfdf;
-      // &.last {border-right: 0;}
-    // .top .p-img { width: 30%;}
-    // .btm .p-img {width: 23%;}
   }
 
   @include bp(dt) {
@@ -257,15 +254,14 @@
 
     .partner-block{padding:15px 0;
       .inner {width: 95%;}
-      .top {margin-bottom: 10px;
-        .p-img { width: 22%; }
-      }
     }
   }
 
-  @include bp(tn) {
+  @media screen and (max-width: 823px) {
     .partner-block{
-      .p-img {padding: 10px 0px;}
+      .inner {@include sec-default();}
+      .p-img.topgo { width: 24%;}
+      .p-img.btm { padding:10px 0;}
     }
   }
 
@@ -395,6 +391,12 @@
     .partners {
       .left .service-link {width: 75%; @include center-block(); margin-top: 10px;}
       .p-img {width:32%; margin:0; padding: 5px 8px;}
+    }
+
+    .partner-block{padding:5px 0 0px;
+      .p-img{
+        &.topgo, &.btm {width: 30%; padding:5px 10px; margin: 5px 1%}
+      }
     }
   }
 
